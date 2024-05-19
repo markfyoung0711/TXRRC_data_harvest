@@ -3,11 +3,13 @@ import copy
 
 @dataclass
 class Symbol:
+    level: int = None
     name: str = None
     picture: str = None
     cardinality: int = None
     redefines: str = None
     occurs: int = None
+    usage: str = None
 
     def __init__(self):
         pass
@@ -16,11 +18,13 @@ class Symbol:
         return (self.name is not None) and (self.picture is not None)
 
     def reset(self):
+        self.level = None
         self.name = None
         self.picture = None
         self.cardinality = None
         self.redefines = None
         self.occurs = None
+        self.usage = None
 
 @dataclass
 class SymbolTable:

@@ -66,7 +66,7 @@ Level:01 Name:FIELD-MAST
 current_symbol = Symbol()
 symbol_table = SymbolTable()
 
-def my_visit(ctx:ParserRuleContext):
+def visit_to_generate_symbol_table(ctx:ParserRuleContext):
 
     numChildren = ctx.getChildCount()
 
@@ -169,17 +169,80 @@ def my_visit(ctx:ParserRuleContext):
             if len(_picture) > 0:
                 _picture_string = ' Type: PIC ' + ' '.join(_picture)
 
-            '''
-            (Pdb) ctx.dataPictureClause()[0].pictureString().pictureChars()[0].getText()
-            '9'
-            (Pdb) ctx.dataPictureClause()[0].pictureString().pictureChars()[1].getText()
-            '('
-            (Pdb) ctx.dataPictureClause()[0].pictureString().pictureChars()[1].integerLiteral()
-            (Pdb) ctx.dataPictureClause()[0].pictureString().pictureChars()[2].integerLiteral()
-            <Cobol85Parser.Cobol85Parser.IntegerLiteralContext object at 0x7fe9758df220>
-            (Pdb) ctx.dataPictureClause()[0].pictureString().pictureChars()[2].integerLiteral().getText()
-            '06'
-            '''
+            # data usage
+            _data_usage = []
+            if len(ctx.dataUsageClause()) > 0:
+                for cindex in ctx.dataUsageClause():
+                    if (result := cindex.BINARY()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.BIT()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.COMP()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.COMP_1()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.COMP_2()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.COMP_3()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.COMP_4()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.COMP_5()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.COMPUTATIONAL()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.COMPUTATIONAL_1()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.COMPUTATIONAL_2()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.COMPUTATIONAL_3()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.COMPUTATIONAL_4()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.COMPUTATIONAL_5()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.CONTROL_POINT()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.DATE()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.DISPLAY()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.DISPLAY_1()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.DOUBLE()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.EVENT()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.FUNCTION_POINTER()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.INDEX()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.KANJI()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.LOCK()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.NATIONAL()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.PACKED_DECIMAL()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.POINTER()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.PROCEDURE_POINTER()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.REAL()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.TASK()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.USAGE()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.IS()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.TRUNCATED()) is not None:
+                        _data_usage.append(result.getText())
+                    if (result := cindex.EXTENDED()) is not None:
+                        _data_usage.append(result.getText())
+                if len(_data_usage) > 0:
+                    current_symbol.usage = _data_usage
 
             # REDEFINES
             _redefines = []
@@ -216,7 +279,7 @@ def my_visit(ctx:ParserRuleContext):
         return
 
     for idx in range(0, ctx.getChildCount()):
-        my_visit(ctx.getChild(idx))
+        visit_to_generate_symbol_table(ctx.getChild(idx))
 
 
 # This class defines a complete listener for a parse tree produced by Cobol85Parser.
@@ -935,8 +998,7 @@ class Cobol85Listener(ParseTreeListener):
 
     # Enter a parse tree produced by Cobol85Parser#fileSection.
     def enterFileSection(self, ctx:Cobol85Parser.FileSectionContext):
-        my_visit(ctx)
-        import pdb; pdb.set_trace()
+        visit_to_generate_symbol_table(ctx)
         pass
 
     # Exit a parse tree produced by Cobol85Parser#fileSection.
