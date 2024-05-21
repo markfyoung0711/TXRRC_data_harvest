@@ -26,16 +26,11 @@ writing a parser from scratch and "re-inventing the wheel".
 These are the steps to generate the Lexer, Parser, Listener and
 customize the Listener.
 
-1. to generate the Lexer, Parser and Listener for python3:
-`antlr4 -listener -Dlanguage=Python3 Cobol85.g4`
-Generates these:
-`Cobol85Lexer.py Cobol85Listener.py Cobol85Parser.py`
-</code>
-
-1. Preprocessor?
+1. Generate the Lexer, Parser and Listener for python3: <br>`antlr4 -listener -Dlanguage=Python3 Cobol85.g4`
+<br>Generates these:<br>`Cobol85Lexer.py Cobol85Listener.py Cobol85Parser.py`
+1. Preprocessor
 There is a .g4 file for Cobol84Preprocessor but I did not find a use for it.
 It may have been handy for removing comments from the Cobol code, like what I say to do manually below, but I'm not sure.
-
 1. subclass Cobol85Listener.py and add the listener/visitor code that will
 be able to build a Symbol and SymbolTable.  Write a wrapper `cobol.py` program
 that will run the Lexer, Parser, and customized Listener so that the Symbol(s)
