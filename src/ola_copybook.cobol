@@ -1,19 +1,19 @@
 IDENTIFICATION DIVISION.
 
-PROGRAM-ID. PROVIDE-STRUCTURE
+PROGRAM-ID. SHOW-STRUCTURE.
 
 DATA DIVISION.
 FILE SECTION.
-FD TXOilLedgerFile.
-      01 FIELD-MAST.
-          02 OIL-CODES.
-              03 TYPE-REC PIC 9.
-              03 DIST PIC 999.
-              03 FIELD PIC 9(8).
-              03 OPR PIC 9(6).
-              03 LEASE PIC 9(5).
-              03 LSE-FILLER PIC 99.
-              03 OFFSHORE PIC 9.
+FD oil_file.
+01 FIELD-MAST.
+    02 OIL-CODES.
+        03 TYPE-REC PIC 9.
+        03 DIST PIC 999.
+        03 FIELD PIC 9(8).
+        03 OPR PIC 9(6).
+        03 LEASE PIC 9(5).
+        03 LSE-FILLER PIC 99.
+        03 OFFSHORE PIC 9.
           02 FIELD-DATA.
               03 F-NAME PIC X(32).
               03 COUNTY PIC 9(18).
@@ -37,14 +37,13 @@ FD TXOilLedgerFile.
               03 PRT-AS-IS PIC 9.
               03 YARD PIC 9.
               03 T-CODES PIC 9(12).
-              03 TEST-CODE REDEFINES T-CODES
-                           OCCURS 12 TIMES
-                                   PIC 9.
-              03 ALLOCATION PIC 9(12). 
-              03 FACTORS REDEFINES ALLOCATION
-                         OCCURS 3 TIMES.
-                  05 PERCNT PIC V99.
-                  05 CODEF PIC 99.
+              03 TEST-CODE REDEFINES T-CODES OCCURS 12 TIMES PIC 9.
+              03 ALLOCATION-PERCNT01 PIC V99.
+              03 ALLOCATION-CODEF01 PIC 99.
+              03 ALLOCATION-PERCNT02 PIC V99.
+              03 ALLOCATION-CODEF02 PIC 99.
+              03 ALLOCATION-PERCNT03 PIC V99.
+              03 ALLOCATION-CODEF03 PIC 99.
               03 RES-AMT PIC 9(6). 
               03 F-GOR PIC 9(6).
               03 F-LIMIT REDEFINES F-GOR.
@@ -76,12 +75,8 @@ FD TXOilLedgerFile.
               03 F-RMK2 PIC X(66).
               03 PERM-NO PIC X(5).
               03 SP-FHC PIC 9.
-              03 ANNUAL-1.
-                  05 AN-A PIC X(90).
-                  05 AN-B PIC X(35).
-              03 ANNUAL-2 REDEFINES ANNUAL-1.
-                  05 AN-1 PIC X(66).
-                  05 AN-2 PIC X(59).
+              03 AN-1 PIC X(66).
+              03 AN-2 PIC X(59).
               03 F-OOIP PIC 9(08).
               03 FILLER1 PIC 9(07).
               03 FILLER2 PIC 9(15).
@@ -101,10 +96,9 @@ FD TXOilLedgerFile.
                   05 FM-CHG PIC 9.
                   05 FM-PROD-FACT PIC S99V999 COMP-3.
                   05 FM-SPLIT-PROD-FACT PIC S99V999 COMP-3.
-                  05 FM-SPLIT-PROD-FACT-DATE
-                             PIC 99.
+                  05 FM-SPLIT-PROD-FACT-DATE PIC 99.
                   05 FM-JOHN PIC 9.
-                  05 FM-OTH PIC S9(8)V9(7) COMP-3.
+                  05 FM-OTH PIC S99999999V9999999 COMP-3.
                   05 FILLER5 PIC X(15).
       01 LEASE-MAST REDEFINES FIELD-MAST.
           02 LSE-CODES.
@@ -430,7 +424,7 @@ WORKING-STORAGE SECTION.
 01 WS-EOF-FLAG  PIC X VALUE 'N'.
 
 PROCEDURE DIVISION.
-Begin.
+    DISPLAY 'Start of Program'.
     OPEN INPUT TXOilLedgerFile
     PERFORM UNTIL WS-EOF-FLAG = 'Y'
         READ MyFile INTO PersonRecord
@@ -441,6 +435,7 @@ Begin.
         END-READ
     END-PERFORM
     CLOSE MyFile
+    DISPLAY 'End of Program'.
     STOP RUN.
 
 ProcessRecord.

@@ -1,7 +1,5 @@
 import copy
 
-from dataclasses import dataclass
-
 import pandas as pd
 
 computationals = set(['COMP-1', 'COMP-2', 'COMP-3', 'COMP-4', 'COMP-5',
@@ -15,7 +13,6 @@ def is_computational(usage):
 
     return (usage is not None) and (len(set(usage).intersection(computationals)) > 0)
 
-@dataclass
 class Symbol:
     level: int = None
     name: str = None
@@ -147,7 +144,6 @@ class Symbol:
         if self.size > 0:
             self.struct_format = f'{self.size}s'
 
-@dataclass
 class SymbolTable:
 
     def __init__(self):
