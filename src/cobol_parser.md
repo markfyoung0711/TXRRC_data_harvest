@@ -27,27 +27,25 @@ These are the steps to generate the Lexer, Parser, Listener and
 customize the Listener.
 
 1. to generate the Lexer, Parser and Listener for python3:
-<code>antlr4 -listener -Dlanguage=Python3 Cobol85.g4</code>
+`antlr4 -listener -Dlanguage=Python3 Cobol85.g4`
 Generates these:
-<code>Cobol85Lexer.py
-Cobol85Listener.py
-Cobol85Parser.py</code>
+`Cobol85Lexer.py Cobol85Listener.py Cobol85Parser.py`
+</code>
 1. Preprocessor?
 There is a .g4 file for Cobol84Preprocessor but I did not find a use for it.
 It may have been handy for removing comments from the Cobol code, like what I say to do manually below, but I'm not sure.
 1. subclass Cobol85Listener.py and add the listener/visitor code that will
-be able to build a Symbol and SymbolTable.  Write a wrapper "cobol.py" program
+be able to build a Symbol and SymbolTable.  Write a wrapper `cobol.py` program
 that will run the Lexer, Parser, and customized Listener so that the Symbol(s)
 and SymbolTable can be built.  The listener should fill in the symbol and symbol table
-objects for later inspection for building the python "struct" formats
+objects for later inspection for building the python [struct](https://docs.python.org/3/library/struct.html) formats
 1. copy the copybook into a Cobol program and make the program complete by
 adding other required divisions
 `ola_copybook.cobol` is the resulting file from this step
 1. to generate tree for the Oil Ledger copybook for TX RRC
     1. copy the COBOL code and post process the line numbers off of the end of the file.
     1. Put in the proper structure based on the ola_copybook.txt example
-    It helped to generate a tree for the program
-    <code>pygrun -t Cobol85 startRule ola_copybook.cobol</code>
+    It helped to generate a tree for the program<br>`pygrun -t Cobol85 startRule ola_copybook.cobol`
 1. To generate the symbol table that can be used then for generating python dat structure:
     <code>python cobol.py ola_copybook.txt</code>
 
