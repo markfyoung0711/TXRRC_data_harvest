@@ -41,5 +41,4 @@ adding other required divisions into the file `ola_copybook.cobol`
     1. copy the COBOL code and post process the line numbers off of the end of the file.
     1. Put in the proper structure based on the ola_copybook.txt example
     It helped to generate a tree for the program<br>`pygrun -t Cobol85 startRule ola_copybook.cobol`
-1. To generate the symbol table that can be used then for generating python dat structure:
-    `python cobol.py ola_copybook.txt`
+1. To generate the symbol table that can be used then for generating python dat structure:<br>`python cobol.py ola_copybook.txt`
