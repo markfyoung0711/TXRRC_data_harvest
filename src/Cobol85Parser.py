@@ -1,8 +1,6 @@
 # Generated from Cobol85.g4 by ANTLR 4.13.1
 # encoding: utf-8
-from antlr4 import ATN, ATNDeserializer, DFA, NoViableAltException, ParseTreeListener, ParseTreeVisitor, Parser, ParserATNSimulator, ParserRuleContext, PredictionContextCache, RecognitionException, Token, TokenStream
-
-
+from antlr4 import *
 from io import StringIO
 import sys
 if sys.version_info[1] > 5:
@@ -4522,12 +4520,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitStartRule" ):
                 listener.exitStartRule(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStartRule" ):
-                return visitor.visitStartRule(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -4574,12 +4566,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCompilationUnit" ):
                 listener.exitCompilationUnit(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCompilationUnit" ):
-                return visitor.visitCompilationUnit(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -4656,12 +4642,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProgramUnit" ):
                 listener.exitProgramUnit(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProgramUnit" ):
-                return visitor.visitProgramUnit(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -4758,12 +4738,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitEndProgramStatement" ):
                 listener.exitEndProgramStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEndProgramStatement" ):
-                return visitor.visitEndProgramStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -4830,12 +4804,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIdentificationDivision" ):
                 listener.exitIdentificationDivision(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitIdentificationDivision" ):
-                return visitor.visitIdentificationDivision(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -4920,12 +4888,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIdentificationDivisionBody" ):
                 listener.exitIdentificationDivisionBody(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitIdentificationDivisionBody" ):
-                return visitor.visitIdentificationDivisionBody(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -5036,12 +4998,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitProgramIdParagraph" ):
                 listener.exitProgramIdParagraph(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProgramIdParagraph" ):
-                return visitor.visitProgramIdParagraph(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -5140,12 +5096,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitAuthorParagraph" ):
                 listener.exitAuthorParagraph(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAuthorParagraph" ):
-                return visitor.visitAuthorParagraph(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -5204,12 +5154,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInstallationParagraph" ):
                 listener.exitInstallationParagraph(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInstallationParagraph" ):
-                return visitor.visitInstallationParagraph(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -5270,12 +5214,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDateWrittenParagraph" ):
                 listener.exitDateWrittenParagraph(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDateWrittenParagraph" ):
-                return visitor.visitDateWrittenParagraph(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -5334,12 +5272,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDateCompiledParagraph" ):
                 listener.exitDateCompiledParagraph(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDateCompiledParagraph" ):
-                return visitor.visitDateCompiledParagraph(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -5400,12 +5332,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSecurityParagraph" ):
                 listener.exitSecurityParagraph(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSecurityParagraph" ):
-                return visitor.visitSecurityParagraph(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -5464,12 +5390,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRemarksParagraph" ):
                 listener.exitRemarksParagraph(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRemarksParagraph" ):
-                return visitor.visitRemarksParagraph(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -5536,12 +5456,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitEnvironmentDivision" ):
                 listener.exitEnvironmentDivision(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEnvironmentDivision" ):
-                return visitor.visitEnvironmentDivision(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -5606,12 +5520,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEnvironmentDivisionBody" ):
                 listener.exitEnvironmentDivisionBody(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEnvironmentDivisionBody" ):
-                return visitor.visitEnvironmentDivisionBody(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -5685,12 +5593,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitConfigurationSection" ):
                 listener.exitConfigurationSection(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitConfigurationSection" ):
-                return visitor.visitConfigurationSection(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -5755,12 +5657,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConfigurationSectionParagraph" ):
                 listener.exitConfigurationSectionParagraph(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitConfigurationSectionParagraph" ):
-                return visitor.visitConfigurationSectionParagraph(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -5839,12 +5735,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSourceComputerParagraph" ):
                 listener.exitSourceComputerParagraph(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSourceComputerParagraph" ):
-                return visitor.visitSourceComputerParagraph(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -5929,12 +5819,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitObjectComputerParagraph" ):
                 listener.exitObjectComputerParagraph(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitObjectComputerParagraph" ):
-                return visitor.visitObjectComputerParagraph(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -6009,12 +5893,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitObjectComputerClause" ):
                 listener.exitObjectComputerClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitObjectComputerClause" ):
-                return visitor.visitObjectComputerClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -6104,12 +5982,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMemorySizeClause" ):
                 listener.exitMemorySizeClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMemorySizeClause" ):
-                return visitor.visitMemorySizeClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -6207,12 +6079,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDiskSizeClause" ):
                 listener.exitDiskSizeClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDiskSizeClause" ):
-                return visitor.visitDiskSizeClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -6323,12 +6189,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitCollatingSequenceClause" ):
                 listener.exitCollatingSequenceClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCollatingSequenceClause" ):
-                return visitor.visitCollatingSequenceClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -6436,12 +6296,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitCollatingSequenceClauseAlphanumeric" ):
                 listener.exitCollatingSequenceClauseAlphanumeric(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCollatingSequenceClauseAlphanumeric" ):
-                return visitor.visitCollatingSequenceClauseAlphanumeric(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -6512,12 +6366,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitCollatingSequenceClauseNational" ):
                 listener.exitCollatingSequenceClauseNational(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCollatingSequenceClauseNational" ):
-                return visitor.visitCollatingSequenceClauseNational(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -6585,12 +6433,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSegmentLimitClause" ):
                 listener.exitSegmentLimitClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSegmentLimitClause" ):
-                return visitor.visitSegmentLimitClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -6649,12 +6491,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitCharacterSetClause" ):
                 listener.exitCharacterSetClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCharacterSetClause" ):
-                return visitor.visitCharacterSetClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -6712,12 +6548,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSpecialNamesParagraph" ):
                 listener.exitSpecialNamesParagraph(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSpecialNamesParagraph" ):
-                return visitor.visitSpecialNamesParagraph(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -6823,12 +6653,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSpecialNameClause" ):
                 listener.exitSpecialNameClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSpecialNameClause" ):
-                return visitor.visitSpecialNameClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -6943,12 +6767,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitAlphabetClause" ):
                 listener.exitAlphabetClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAlphabetClause" ):
-                return visitor.visitAlphabetClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -7041,12 +6859,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlphabetClauseFormat1" ):
                 listener.exitAlphabetClauseFormat1(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAlphabetClauseFormat1" ):
-                return visitor.visitAlphabetClauseFormat1(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -7173,12 +6985,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitAlphabetLiterals" ):
                 listener.exitAlphabetLiterals(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAlphabetLiterals" ):
-                return visitor.visitAlphabetLiterals(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -7253,12 +7059,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitAlphabetThrough" ):
                 listener.exitAlphabetThrough(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAlphabetThrough" ):
-                return visitor.visitAlphabetThrough(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -7314,12 +7114,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlphabetAlso" ):
                 listener.exitAlphabetAlso(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAlphabetAlso" ):
-                return visitor.visitAlphabetAlso(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -7398,12 +7192,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlphabetClauseFormat2" ):
                 listener.exitAlphabetClauseFormat2(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAlphabetClauseFormat2" ):
-                return visitor.visitAlphabetClauseFormat2(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -7494,12 +7282,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitChannelClause" ):
                 listener.exitChannelClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitChannelClause" ):
-                return visitor.visitChannelClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -7576,12 +7358,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitClassClause" ):
                 listener.exitClassClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitClassClause" ):
-                return visitor.visitClassClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -7681,12 +7457,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitClassClauseThrough" ):
                 listener.exitClassClauseThrough(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitClassClauseThrough" ):
-                return visitor.visitClassClauseThrough(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -7749,12 +7519,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitClassClauseFrom" ):
                 listener.exitClassClauseFrom(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitClassClauseFrom" ):
-                return visitor.visitClassClauseFrom(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -7813,12 +7577,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitClassClauseTo" ):
                 listener.exitClassClauseTo(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitClassClauseTo" ):
-                return visitor.visitClassClauseTo(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -7895,12 +7653,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCurrencySignClause" ):
                 listener.exitCurrencySignClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCurrencySignClause" ):
-                return visitor.visitCurrencySignClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -7988,12 +7740,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDecimalPointClause" ):
                 listener.exitDecimalPointClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDecimalPointClause" ):
-                return visitor.visitDecimalPointClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -8069,12 +7815,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDefaultComputationalSignClause" ):
                 listener.exitDefaultComputationalSignClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDefaultComputationalSignClause" ):
-                return visitor.visitDefaultComputationalSignClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -8188,12 +7928,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDefaultDisplaySignClause" ):
                 listener.exitDefaultDisplaySignClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDefaultDisplaySignClause" ):
-                return visitor.visitDefaultDisplaySignClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -8286,12 +8020,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEnvironmentSwitchNameClause" ):
                 listener.exitEnvironmentSwitchNameClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEnvironmentSwitchNameClause" ):
-                return visitor.visitEnvironmentSwitchNameClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -8387,12 +8115,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEnvironmentSwitchNameSpecialNamesStatusPhrase" ):
                 listener.exitEnvironmentSwitchNameSpecialNamesStatusPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEnvironmentSwitchNameSpecialNamesStatusPhrase" ):
-                return visitor.visitEnvironmentSwitchNameSpecialNamesStatusPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -8544,12 +8266,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitOdtClause" ):
                 listener.exitOdtClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOdtClause" ):
-                return visitor.visitOdtClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -8616,12 +8332,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReserveNetworkClause" ):
                 listener.exitReserveNetworkClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReserveNetworkClause" ):
-                return visitor.visitReserveNetworkClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -8724,12 +8434,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSymbolicCharactersClause" ):
                 listener.exitSymbolicCharactersClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSymbolicCharactersClause" ):
-                return visitor.visitSymbolicCharactersClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -8843,12 +8547,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSymbolicCharacters" ):
                 listener.exitSymbolicCharacters(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSymbolicCharacters" ):
-                return visitor.visitSymbolicCharacters(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -8939,12 +8637,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitInputOutputSection" ):
                 listener.exitInputOutputSection(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInputOutputSection" ):
-                return visitor.visitInputOutputSection(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -9005,12 +8697,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInputOutputSectionParagraph" ):
                 listener.exitInputOutputSectionParagraph(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInputOutputSectionParagraph" ):
-                return visitor.visitInputOutputSectionParagraph(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -9078,12 +8764,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFileControlParagraph" ):
                 listener.exitFileControlParagraph(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFileControlParagraph" ):
-                return visitor.visitFileControlParagraph(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -9156,12 +8836,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitFileControlEntry" ):
                 listener.exitFileControlEntry(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFileControlEntry" ):
-                return visitor.visitFileControlEntry(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -9220,12 +8894,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSelectClause" ):
                 listener.exitSelectClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSelectClause" ):
-                return visitor.visitSelectClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -9319,12 +8987,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFileControlClause" ):
                 listener.exitFileControlClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFileControlClause" ):
-                return visitor.visitFileControlClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -9472,12 +9134,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitAssignClause" ):
                 listener.exitAssignClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAssignClause" ):
-                return visitor.visitAssignClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -9603,12 +9259,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReserveClause" ):
                 listener.exitReserveClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReserveClause" ):
-                return visitor.visitReserveClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -9706,12 +9356,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOrganizationClause" ):
                 listener.exitOrganizationClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOrganizationClause" ):
-                return visitor.visitOrganizationClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -9812,12 +9456,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitPaddingCharacterClause" ):
                 listener.exitPaddingCharacterClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPaddingCharacterClause" ):
-                return visitor.visitPaddingCharacterClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -9905,12 +9543,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRecordDelimiterClause" ):
                 listener.exitRecordDelimiterClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRecordDelimiterClause" ):
-                return visitor.visitRecordDelimiterClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -10001,12 +9633,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitAccessModeClause" ):
                 listener.exitAccessModeClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAccessModeClause" ):
-                return visitor.visitAccessModeClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -10091,12 +9717,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRecordKeyClause" ):
                 listener.exitRecordKeyClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRecordKeyClause" ):
-                return visitor.visitRecordKeyClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -10205,12 +9825,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitAlternateRecordKeyClause" ):
                 listener.exitAlternateRecordKeyClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAlternateRecordKeyClause" ):
-                return visitor.visitAlternateRecordKeyClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -10304,12 +9918,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitPasswordClause" ):
                 listener.exitPasswordClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPasswordClause" ):
-                return visitor.visitPasswordClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -10374,12 +9982,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFileStatusClause" ):
                 listener.exitFileStatusClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFileStatusClause" ):
-                return visitor.visitFileStatusClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -10459,12 +10061,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitRelativeKeyClause" ):
                 listener.exitRelativeKeyClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRelativeKeyClause" ):
-                return visitor.visitRelativeKeyClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -10541,12 +10137,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIoControlParagraph" ):
                 listener.exitIoControlParagraph(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitIoControlParagraph" ):
-                return visitor.visitIoControlParagraph(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -10632,12 +10222,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIoControlClause" ):
                 listener.exitIoControlClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitIoControlClause" ):
-                return visitor.visitIoControlClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -10729,12 +10313,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitRerunClause" ):
                 listener.exitRerunClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRerunClause" ):
-                return visitor.visitRerunClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -10824,12 +10402,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitRerunEveryRecords" ):
                 listener.exitRerunEveryRecords(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRerunEveryRecords" ):
-                return visitor.visitRerunEveryRecords(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -10888,12 +10460,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRerunEveryOf" ):
                 listener.exitRerunEveryOf(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRerunEveryOf" ):
-                return visitor.visitRerunEveryOf(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -10966,12 +10532,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitRerunEveryClock" ):
                 listener.exitRerunEveryClock(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRerunEveryClock" ):
-                return visitor.visitRerunEveryClock(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -11043,12 +10603,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSameClause" ):
                 listener.exitSameClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSameClause" ):
-                return visitor.visitSameClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -11151,12 +10705,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitMultipleFileClause" ):
                 listener.exitMultipleFileClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMultipleFileClause" ):
-                return visitor.visitMultipleFileClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -11239,12 +10787,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitMultipleFilePosition" ):
                 listener.exitMultipleFilePosition(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMultipleFilePosition" ):
-                return visitor.visitMultipleFilePosition(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -11306,12 +10848,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCommitmentControlClause" ):
                 listener.exitCommitmentControlClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCommitmentControlClause" ):
-                return visitor.visitCommitmentControlClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -11379,12 +10915,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataDivision" ):
                 listener.exitDataDivision(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataDivision" ):
-                return visitor.visitDataDivision(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -11474,12 +11004,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataDivisionSection" ):
                 listener.exitDataDivisionSection(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataDivisionSection" ):
-                return visitor.visitDataDivisionSection(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -11583,12 +11107,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitFileSection" ):
                 listener.exitFileSection(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFileSection" ):
-                return visitor.visitFileSection(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -11671,12 +11189,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFileDescriptionEntry" ):
                 listener.exitFileDescriptionEntry(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFileDescriptionEntry" ):
-                return visitor.visitFileDescriptionEntry(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -11799,12 +11311,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitFileDescriptionEntryClause" ):
                 listener.exitFileDescriptionEntryClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFileDescriptionEntryClause" ):
-                return visitor.visitFileDescriptionEntryClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -11916,12 +11422,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitExternalClause" ):
                 listener.exitExternalClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExternalClause" ):
-                return visitor.visitExternalClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -11974,12 +11474,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGlobalClause" ):
                 listener.exitGlobalClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitGlobalClause" ):
-                return visitor.visitGlobalClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -12047,12 +11541,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBlockContainsClause" ):
                 listener.exitBlockContainsClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitBlockContainsClause" ):
-                return visitor.visitBlockContainsClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -12131,12 +11619,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitBlockContainsTo" ):
                 listener.exitBlockContainsTo(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitBlockContainsTo" ):
-                return visitor.visitBlockContainsTo(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -12191,12 +11673,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRecordContainsClause" ):
                 listener.exitRecordContainsClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRecordContainsClause" ):
-                return visitor.visitRecordContainsClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -12264,12 +11740,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRecordContainsClauseFormat1" ):
                 listener.exitRecordContainsClauseFormat1(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRecordContainsClauseFormat1" ):
-                return visitor.visitRecordContainsClauseFormat1(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -12361,12 +11831,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRecordContainsClauseFormat2" ):
                 listener.exitRecordContainsClauseFormat2(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRecordContainsClauseFormat2" ):
-                return visitor.visitRecordContainsClauseFormat2(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -12495,12 +11959,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitRecordContainsClauseFormat3" ):
                 listener.exitRecordContainsClauseFormat3(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRecordContainsClauseFormat3" ):
-                return visitor.visitRecordContainsClauseFormat3(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -12564,12 +12022,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRecordContainsTo" ):
                 listener.exitRecordContainsTo(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRecordContainsTo" ):
-                return visitor.visitRecordContainsTo(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -12638,12 +12090,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLabelRecordsClause" ):
                 listener.exitLabelRecordsClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLabelRecordsClause" ):
-                return visitor.visitLabelRecordsClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -12755,12 +12201,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitValueOfClause" ):
                 listener.exitValueOfClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitValueOfClause" ):
-                return visitor.visitValueOfClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -12828,12 +12268,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitValuePair" ):
                 listener.exitValuePair(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitValuePair" ):
-                return visitor.visitValuePair(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -12917,12 +12351,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataRecordsClause" ):
                 listener.exitDataRecordsClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataRecordsClause" ):
-                return visitor.visitDataRecordsClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -13029,12 +12457,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitLinageClause" ):
                 listener.exitLinageClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLinageClause" ):
-                return visitor.visitLinageClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -13126,12 +12548,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitLinageAt" ):
                 listener.exitLinageAt(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLinageAt" ):
-                return visitor.visitLinageAt(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -13205,12 +12621,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLinageFootingAt" ):
                 listener.exitLinageFootingAt(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLinageFootingAt" ):
-                return visitor.visitLinageFootingAt(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -13298,12 +12708,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitLinageLinesAtTop" ):
                 listener.exitLinageLinesAtTop(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLinageLinesAtTop" ):
-                return visitor.visitLinageLinesAtTop(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -13390,12 +12794,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitLinageLinesAtBottom" ):
                 listener.exitLinageLinesAtBottom(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLinageLinesAtBottom" ):
-                return visitor.visitLinageLinesAtBottom(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -13478,12 +12876,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitRecordingModeClause" ):
                 listener.exitRecordingModeClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRecordingModeClause" ):
-                return visitor.visitRecordingModeClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -13545,12 +12937,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitModeStatement" ):
                 listener.exitModeStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitModeStatement" ):
-                return visitor.visitModeStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -13598,12 +12984,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCodeSetClause" ):
                 listener.exitCodeSetClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCodeSetClause" ):
-                return visitor.visitCodeSetClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -13672,12 +13052,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportClause" ):
                 listener.exitReportClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportClause" ):
-                return visitor.visitReportClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -13774,12 +13148,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDataBaseSection" ):
                 listener.exitDataBaseSection(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataBaseSection" ):
-                return visitor.visitDataBaseSection(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -13847,12 +13215,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDataBaseSectionEntry" ):
                 listener.exitDataBaseSectionEntry(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataBaseSectionEntry" ):
-                return visitor.visitDataBaseSectionEntry(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -13912,12 +13274,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitWorkingStorageSection" ):
                 listener.exitWorkingStorageSection(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitWorkingStorageSection" ):
-                return visitor.visitWorkingStorageSection(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -13987,12 +13343,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLinkageSection" ):
                 listener.exitLinkageSection(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLinkageSection" ):
-                return visitor.visitLinkageSection(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -14070,12 +13420,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitCommunicationSection" ):
                 listener.exitCommunicationSection(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCommunicationSection" ):
-                return visitor.visitCommunicationSection(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -14152,12 +13496,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCommunicationDescriptionEntry" ):
                 listener.exitCommunicationDescriptionEntry(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCommunicationDescriptionEntry" ):
-                return visitor.visitCommunicationDescriptionEntry(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -14304,12 +13642,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCommunicationDescriptionEntryFormat1" ):
                 listener.exitCommunicationDescriptionEntryFormat1(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCommunicationDescriptionEntryFormat1" ):
-                return visitor.visitCommunicationDescriptionEntryFormat1(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -14499,12 +13831,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitCommunicationDescriptionEntryFormat2" ):
                 listener.exitCommunicationDescriptionEntryFormat2(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCommunicationDescriptionEntryFormat2" ):
-                return visitor.visitCommunicationDescriptionEntryFormat2(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -14668,12 +13994,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitCommunicationDescriptionEntryFormat3" ):
                 listener.exitCommunicationDescriptionEntryFormat3(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCommunicationDescriptionEntryFormat3" ):
-                return visitor.visitCommunicationDescriptionEntryFormat3(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -14796,12 +14116,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDestinationCountClause" ):
                 listener.exitDestinationCountClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDestinationCountClause" ):
-                return visitor.visitDestinationCountClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -14881,12 +14195,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDestinationTableClause" ):
                 listener.exitDestinationTableClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDestinationTableClause" ):
-                return visitor.visitDestinationTableClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -14970,12 +14278,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitEndKeyClause" ):
                 listener.exitEndKeyClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEndKeyClause" ):
-                return visitor.visitEndKeyClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -15040,12 +14342,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitErrorKeyClause" ):
                 listener.exitErrorKeyClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitErrorKeyClause" ):
-                return visitor.visitErrorKeyClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -15109,12 +14405,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMessageCountClause" ):
                 listener.exitMessageCountClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMessageCountClause" ):
-                return visitor.visitMessageCountClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -15186,12 +14476,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitMessageDateClause" ):
                 listener.exitMessageDateClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMessageDateClause" ):
-                return visitor.visitMessageDateClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -15255,12 +14539,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMessageTimeClause" ):
                 listener.exitMessageTimeClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMessageTimeClause" ):
-                return visitor.visitMessageTimeClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -15326,12 +14604,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitStatusKeyClause" ):
                 listener.exitStatusKeyClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStatusKeyClause" ):
-                return visitor.visitStatusKeyClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -15395,12 +14667,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSymbolicDestinationClause" ):
                 listener.exitSymbolicDestinationClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSymbolicDestinationClause" ):
-                return visitor.visitSymbolicDestinationClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -15472,12 +14738,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSymbolicQueueClause" ):
                 listener.exitSymbolicQueueClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSymbolicQueueClause" ):
-                return visitor.visitSymbolicQueueClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -15548,12 +14808,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSymbolicSourceClause" ):
                 listener.exitSymbolicSourceClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSymbolicSourceClause" ):
-                return visitor.visitSymbolicSourceClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -15623,12 +14877,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSymbolicTerminalClause" ):
                 listener.exitSymbolicTerminalClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSymbolicTerminalClause" ):
-                return visitor.visitSymbolicTerminalClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -15706,12 +14954,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSymbolicSubQueueClause" ):
                 listener.exitSymbolicSubQueueClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSymbolicSubQueueClause" ):
-                return visitor.visitSymbolicSubQueueClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -15786,12 +15028,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTextLengthClause" ):
                 listener.exitTextLengthClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTextLengthClause" ):
-                return visitor.visitTextLengthClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -15869,12 +15105,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLocalStorageSection" ):
                 listener.exitLocalStorageSection(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLocalStorageSection" ):
-                return visitor.visitLocalStorageSection(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -15956,12 +15186,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitScreenSection" ):
                 listener.exitScreenSection(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenSection" ):
-                return visitor.visitScreenSection(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -16225,12 +15449,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitScreenDescriptionEntry" ):
                 listener.exitScreenDescriptionEntry(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionEntry" ):
-                return visitor.visitScreenDescriptionEntry(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -16452,12 +15670,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitScreenDescriptionBlankClause" ):
                 listener.exitScreenDescriptionBlankClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionBlankClause" ):
-                return visitor.visitScreenDescriptionBlankClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -16510,12 +15722,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitScreenDescriptionBellClause" ):
                 listener.exitScreenDescriptionBellClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionBellClause" ):
-                return visitor.visitScreenDescriptionBellClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -16563,12 +15769,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitScreenDescriptionBlinkClause" ):
                 listener.exitScreenDescriptionBlinkClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionBlinkClause" ):
-                return visitor.visitScreenDescriptionBlinkClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -16615,12 +15815,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitScreenDescriptionEraseClause" ):
                 listener.exitScreenDescriptionEraseClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionEraseClause" ):
-                return visitor.visitScreenDescriptionEraseClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -16673,12 +15867,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitScreenDescriptionLightClause" ):
                 listener.exitScreenDescriptionLightClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionLightClause" ):
-                return visitor.visitScreenDescriptionLightClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -16733,12 +15921,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitScreenDescriptionGridClause" ):
                 listener.exitScreenDescriptionGridClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionGridClause" ):
-                return visitor.visitScreenDescriptionGridClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -16786,12 +15968,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitScreenDescriptionReverseVideoClause" ):
                 listener.exitScreenDescriptionReverseVideoClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionReverseVideoClause" ):
-                return visitor.visitScreenDescriptionReverseVideoClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -16832,12 +16008,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitScreenDescriptionUnderlineClause" ):
                 listener.exitScreenDescriptionUnderlineClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionUnderlineClause" ):
-                return visitor.visitScreenDescriptionUnderlineClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -16890,12 +16060,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitScreenDescriptionSizeClause" ):
                 listener.exitScreenDescriptionSizeClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionSizeClause" ):
-                return visitor.visitScreenDescriptionSizeClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -16983,12 +16147,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitScreenDescriptionLineClause" ):
                 listener.exitScreenDescriptionLineClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionLineClause" ):
-                return visitor.visitScreenDescriptionLineClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -17101,12 +16259,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitScreenDescriptionColumnClause" ):
                 listener.exitScreenDescriptionColumnClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionColumnClause" ):
-                return visitor.visitScreenDescriptionColumnClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -17211,12 +16363,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitScreenDescriptionForegroundColorClause" ):
                 listener.exitScreenDescriptionForegroundColorClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionForegroundColorClause" ):
-                return visitor.visitScreenDescriptionForegroundColorClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -17300,12 +16446,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitScreenDescriptionBackgroundColorClause" ):
                 listener.exitScreenDescriptionBackgroundColorClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionBackgroundColorClause" ):
-                return visitor.visitScreenDescriptionBackgroundColorClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -17382,12 +16522,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitScreenDescriptionControlClause" ):
                 listener.exitScreenDescriptionControlClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionControlClause" ):
-                return visitor.visitScreenDescriptionControlClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -17446,12 +16580,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitScreenDescriptionValueClause" ):
                 listener.exitScreenDescriptionValueClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionValueClause" ):
-                return visitor.visitScreenDescriptionValueClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -17514,12 +16642,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitScreenDescriptionPictureClause" ):
                 listener.exitScreenDescriptionPictureClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionPictureClause" ):
-                return visitor.visitScreenDescriptionPictureClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -17590,12 +16712,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitScreenDescriptionFromClause" ):
                 listener.exitScreenDescriptionFromClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionFromClause" ):
-                return visitor.visitScreenDescriptionFromClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -17664,12 +16780,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitScreenDescriptionToClause" ):
                 listener.exitScreenDescriptionToClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionToClause" ):
-                return visitor.visitScreenDescriptionToClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -17716,12 +16826,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitScreenDescriptionUsingClause" ):
                 listener.exitScreenDescriptionUsingClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionUsingClause" ):
-                return visitor.visitScreenDescriptionUsingClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -17774,12 +16878,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitScreenDescriptionUsageClause" ):
                 listener.exitScreenDescriptionUsageClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionUsageClause" ):
-                return visitor.visitScreenDescriptionUsageClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -17844,12 +16942,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitScreenDescriptionBlankWhenZeroClause" ):
                 listener.exitScreenDescriptionBlankWhenZeroClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionBlankWhenZeroClause" ):
-                return visitor.visitScreenDescriptionBlankWhenZeroClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -17907,12 +16999,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitScreenDescriptionJustifiedClause" ):
                 listener.exitScreenDescriptionJustifiedClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionJustifiedClause" ):
-                return visitor.visitScreenDescriptionJustifiedClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -17983,12 +17069,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitScreenDescriptionSignClause" ):
                 listener.exitScreenDescriptionSignClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionSignClause" ):
-                return visitor.visitScreenDescriptionSignClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -18072,12 +17152,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitScreenDescriptionAutoClause" ):
                 listener.exitScreenDescriptionAutoClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionAutoClause" ):
-                return visitor.visitScreenDescriptionAutoClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -18128,12 +17202,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitScreenDescriptionSecureClause" ):
                 listener.exitScreenDescriptionSecureClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionSecureClause" ):
-                return visitor.visitScreenDescriptionSecureClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -18183,12 +17251,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitScreenDescriptionRequiredClause" ):
                 listener.exitScreenDescriptionRequiredClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionRequiredClause" ):
-                return visitor.visitScreenDescriptionRequiredClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -18254,12 +17316,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitScreenDescriptionPromptClause" ):
                 listener.exitScreenDescriptionPromptClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionPromptClause" ):
-                return visitor.visitScreenDescriptionPromptClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -18348,12 +17404,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitScreenDescriptionPromptOccursClause" ):
                 listener.exitScreenDescriptionPromptOccursClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionPromptOccursClause" ):
-                return visitor.visitScreenDescriptionPromptOccursClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -18409,12 +17459,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitScreenDescriptionFullClause" ):
                 listener.exitScreenDescriptionFullClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionFullClause" ):
-                return visitor.visitScreenDescriptionFullClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -18461,12 +17505,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitScreenDescriptionZeroFillClause" ):
                 listener.exitScreenDescriptionZeroFillClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenDescriptionZeroFillClause" ):
-                return visitor.visitScreenDescriptionZeroFillClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -18521,12 +17559,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportSection" ):
                 listener.exitReportSection(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportSection" ):
-                return visitor.visitReportSection(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -18591,12 +17623,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportDescription" ):
                 listener.exitReportDescription(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportDescription" ):
-                return visitor.visitReportDescription(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -18682,12 +17708,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportDescriptionEntry" ):
                 listener.exitReportDescriptionEntry(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportDescriptionEntry" ):
-                return visitor.visitReportDescriptionEntry(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -18786,12 +17806,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReportDescriptionGlobalClause" ):
                 listener.exitReportDescriptionGlobalClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportDescriptionGlobalClause" ):
-                return visitor.visitReportDescriptionGlobalClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -18863,12 +17877,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportDescriptionPageLimitClause" ):
                 listener.exitReportDescriptionPageLimitClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportDescriptionPageLimitClause" ):
-                return visitor.visitReportDescriptionPageLimitClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -18962,12 +17970,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReportDescriptionHeadingClause" ):
                 listener.exitReportDescriptionHeadingClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportDescriptionHeadingClause" ):
-                return visitor.visitReportDescriptionHeadingClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -19017,12 +18019,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportDescriptionFirstDetailClause" ):
                 listener.exitReportDescriptionFirstDetailClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportDescriptionFirstDetailClause" ):
-                return visitor.visitReportDescriptionFirstDetailClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -19076,12 +18072,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReportDescriptionLastDetailClause" ):
                 listener.exitReportDescriptionLastDetailClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportDescriptionLastDetailClause" ):
-                return visitor.visitReportDescriptionLastDetailClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -19130,12 +18120,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportDescriptionFootingClause" ):
                 listener.exitReportDescriptionFootingClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportDescriptionFootingClause" ):
-                return visitor.visitReportDescriptionFootingClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -19188,12 +18172,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportGroupDescriptionEntry" ):
                 listener.exitReportGroupDescriptionEntry(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupDescriptionEntry" ):
-                return visitor.visitReportGroupDescriptionEntry(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -19278,12 +18256,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportGroupDescriptionEntryFormat1" ):
                 listener.exitReportGroupDescriptionEntryFormat1(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupDescriptionEntryFormat1" ):
-                return visitor.visitReportGroupDescriptionEntryFormat1(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -19372,12 +18344,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportGroupDescriptionEntryFormat2" ):
                 listener.exitReportGroupDescriptionEntryFormat2(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupDescriptionEntryFormat2" ):
-                return visitor.visitReportGroupDescriptionEntryFormat2(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -19533,12 +18499,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReportGroupDescriptionEntryFormat3" ):
                 listener.exitReportGroupDescriptionEntryFormat3(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupDescriptionEntryFormat3" ):
-                return visitor.visitReportGroupDescriptionEntryFormat3(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -19667,12 +18627,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReportGroupBlankWhenZeroClause" ):
                 listener.exitReportGroupBlankWhenZeroClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupBlankWhenZeroClause" ):
-                return visitor.visitReportGroupBlankWhenZeroClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -19734,12 +18688,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportGroupColumnNumberClause" ):
                 listener.exitReportGroupColumnNumberClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupColumnNumberClause" ):
-                return visitor.visitReportGroupColumnNumberClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -19804,12 +18752,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReportGroupIndicateClause" ):
                 listener.exitReportGroupIndicateClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupIndicateClause" ):
-                return visitor.visitReportGroupIndicateClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -19865,12 +18807,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportGroupJustifiedClause" ):
                 listener.exitReportGroupJustifiedClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupJustifiedClause" ):
-                return visitor.visitReportGroupJustifiedClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -19940,12 +18876,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportGroupLineNumberClause" ):
                 listener.exitReportGroupLineNumberClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupLineNumberClause" ):
-                return visitor.visitReportGroupLineNumberClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -20035,12 +18965,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReportGroupLineNumberNextPage" ):
                 listener.exitReportGroupLineNumberNextPage(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupLineNumberNextPage" ):
-                return visitor.visitReportGroupLineNumberNextPage(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -20105,12 +19029,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReportGroupLineNumberPlus" ):
                 listener.exitReportGroupLineNumberPlus(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupLineNumberPlus" ):
-                return visitor.visitReportGroupLineNumberPlus(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -20171,12 +19089,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportGroupNextGroupClause" ):
                 listener.exitReportGroupNextGroupClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupNextGroupClause" ):
-                return visitor.visitReportGroupNextGroupClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -20252,12 +19164,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReportGroupNextGroupPlus" ):
                 listener.exitReportGroupNextGroupPlus(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupNextGroupPlus" ):
-                return visitor.visitReportGroupNextGroupPlus(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -20303,12 +19209,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportGroupNextGroupNextPage" ):
                 listener.exitReportGroupNextGroupNextPage(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupNextGroupNextPage" ):
-                return visitor.visitReportGroupNextGroupNextPage(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -20362,12 +19262,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportGroupPictureClause" ):
                 listener.exitReportGroupPictureClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupPictureClause" ):
-                return visitor.visitReportGroupPictureClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -20435,12 +19329,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportGroupResetClause" ):
                 listener.exitReportGroupResetClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupResetClause" ):
-                return visitor.visitReportGroupResetClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -20521,12 +19409,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReportGroupSignClause" ):
                 listener.exitReportGroupSignClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupSignClause" ):
-                return visitor.visitReportGroupSignClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -20600,12 +19482,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportGroupSourceClause" ):
                 listener.exitReportGroupSourceClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupSourceClause" ):
-                return visitor.visitReportGroupSourceClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -20681,12 +19557,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportGroupSumClause" ):
                 listener.exitReportGroupSumClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupSumClause" ):
-                return visitor.visitReportGroupSumClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -20810,12 +19680,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReportGroupTypeClause" ):
                 listener.exitReportGroupTypeClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupTypeClause" ):
-                return visitor.visitReportGroupTypeClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -20911,12 +19775,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReportGroupTypeReportHeading" ):
                 listener.exitReportGroupTypeReportHeading(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupTypeReportHeading" ):
-                return visitor.visitReportGroupTypeReportHeading(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -20978,12 +19836,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportGroupTypePageHeading" ):
                 listener.exitReportGroupTypePageHeading(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupTypePageHeading" ):
-                return visitor.visitReportGroupTypePageHeading(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -21053,12 +19905,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportGroupTypeControlHeading" ):
                 listener.exitReportGroupTypeControlHeading(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupTypeControlHeading" ):
-                return visitor.visitReportGroupTypeControlHeading(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -21132,12 +19978,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReportGroupTypeDetail" ):
                 listener.exitReportGroupTypeDetail(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupTypeDetail" ):
-                return visitor.visitReportGroupTypeDetail(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -21197,12 +20037,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportGroupTypeControlFooting" ):
                 listener.exitReportGroupTypeControlFooting(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupTypeControlFooting" ):
-                return visitor.visitReportGroupTypeControlFooting(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -21282,12 +20116,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReportGroupUsageClause" ):
                 listener.exitReportGroupUsageClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupUsageClause" ):
-                return visitor.visitReportGroupUsageClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -21357,12 +20185,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReportGroupTypePageFooting" ):
                 listener.exitReportGroupTypePageFooting(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupTypePageFooting" ):
-                return visitor.visitReportGroupTypePageFooting(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -21424,12 +20246,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportGroupTypeReportFooting" ):
                 listener.exitReportGroupTypeReportFooting(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupTypeReportFooting" ):
-                return visitor.visitReportGroupTypeReportFooting(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -21493,12 +20309,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportGroupValueClause" ):
                 listener.exitReportGroupValueClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportGroupValueClause" ):
-                return visitor.visitReportGroupValueClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -21565,12 +20375,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitProgramLibrarySection" ):
                 listener.exitProgramLibrarySection(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProgramLibrarySection" ):
-                return visitor.visitProgramLibrarySection(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -21631,12 +20435,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLibraryDescriptionEntry" ):
                 listener.exitLibraryDescriptionEntry(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryDescriptionEntry" ):
-                return visitor.visitLibraryDescriptionEntry(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -21706,12 +20504,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLibraryDescriptionEntryFormat1" ):
                 listener.exitLibraryDescriptionEntryFormat1(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryDescriptionEntryFormat1" ):
-                return visitor.visitLibraryDescriptionEntryFormat1(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -21803,12 +20595,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLibraryDescriptionEntryFormat2" ):
                 listener.exitLibraryDescriptionEntryFormat2(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryDescriptionEntryFormat2" ):
-                return visitor.visitLibraryDescriptionEntryFormat2(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -21912,12 +20698,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitLibraryAttributeClauseFormat1" ):
                 listener.exitLibraryAttributeClauseFormat1(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryAttributeClauseFormat1" ):
-                return visitor.visitLibraryAttributeClauseFormat1(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -22006,12 +20786,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLibraryAttributeClauseFormat2" ):
                 listener.exitLibraryAttributeClauseFormat2(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryAttributeClauseFormat2" ):
-                return visitor.visitLibraryAttributeClauseFormat2(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -22109,12 +20883,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitLibraryAttributeFunction" ):
                 listener.exitLibraryAttributeFunction(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryAttributeFunction" ):
-                return visitor.visitLibraryAttributeFunction(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -22166,12 +20934,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLibraryAttributeParameter" ):
                 listener.exitLibraryAttributeParameter(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryAttributeParameter" ):
-                return visitor.visitLibraryAttributeParameter(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -22232,12 +20994,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitLibraryAttributeTitle" ):
                 listener.exitLibraryAttributeTitle(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryAttributeTitle" ):
-                return visitor.visitLibraryAttributeTitle(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -22297,12 +21053,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLibraryEntryProcedureClauseFormat1" ):
                 listener.exitLibraryEntryProcedureClauseFormat1(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryEntryProcedureClauseFormat1" ):
-                return visitor.visitLibraryEntryProcedureClauseFormat1(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -22375,12 +21125,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLibraryEntryProcedureClauseFormat2" ):
                 listener.exitLibraryEntryProcedureClauseFormat2(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryEntryProcedureClauseFormat2" ):
-                return visitor.visitLibraryEntryProcedureClauseFormat2(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -22462,12 +21206,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitLibraryEntryProcedureForClause" ):
                 listener.exitLibraryEntryProcedureForClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryEntryProcedureForClause" ):
-                return visitor.visitLibraryEntryProcedureForClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -22514,12 +21252,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLibraryEntryProcedureGivingClause" ):
                 listener.exitLibraryEntryProcedureGivingClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryEntryProcedureGivingClause" ):
-                return visitor.visitLibraryEntryProcedureGivingClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -22570,12 +21302,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLibraryEntryProcedureUsingClause" ):
                 listener.exitLibraryEntryProcedureUsingClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryEntryProcedureUsingClause" ):
-                return visitor.visitLibraryEntryProcedureUsingClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -22636,12 +21362,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLibraryEntryProcedureUsingName" ):
                 listener.exitLibraryEntryProcedureUsingName(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryEntryProcedureUsingName" ):
-                return visitor.visitLibraryEntryProcedureUsingName(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -22704,12 +21424,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitLibraryEntryProcedureWithClause" ):
                 listener.exitLibraryEntryProcedureWithClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryEntryProcedureWithClause" ):
-                return visitor.visitLibraryEntryProcedureWithClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -22770,12 +21484,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitLibraryEntryProcedureWithName" ):
                 listener.exitLibraryEntryProcedureWithName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryEntryProcedureWithName" ):
-                return visitor.visitLibraryEntryProcedureWithName(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -22833,12 +21541,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitLibraryIsCommonClause" ):
                 listener.exitLibraryIsCommonClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryIsCommonClause" ):
-                return visitor.visitLibraryIsCommonClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -22891,12 +21593,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLibraryIsGlobalClause" ):
                 listener.exitLibraryIsGlobalClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryIsGlobalClause" ):
-                return visitor.visitLibraryIsGlobalClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -22960,12 +21656,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataDescriptionEntry" ):
                 listener.exitDataDescriptionEntry(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataDescriptionEntry" ):
-                return visitor.visitDataDescriptionEntry(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -23191,12 +21881,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDataDescriptionEntryFormat1" ):
                 listener.exitDataDescriptionEntryFormat1(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataDescriptionEntryFormat1" ):
-                return visitor.visitDataDescriptionEntryFormat1(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -23386,12 +22070,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDataDescriptionEntryFormat2" ):
                 listener.exitDataDescriptionEntryFormat2(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataDescriptionEntryFormat2" ):
-                return visitor.visitDataDescriptionEntryFormat2(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -23450,12 +22128,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDataDescriptionEntryFormat3" ):
                 listener.exitDataDescriptionEntryFormat3(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataDescriptionEntryFormat3" ):
-                return visitor.visitDataDescriptionEntryFormat3(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -23508,12 +22180,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataDescriptionEntryExecSql" ):
                 listener.exitDataDescriptionEntryExecSql(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataDescriptionEntryExecSql" ):
-                return visitor.visitDataDescriptionEntryExecSql(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -23577,12 +22243,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDataAlignedClause" ):
                 listener.exitDataAlignedClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataAlignedClause" ):
-                return visitor.visitDataAlignedClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -23635,12 +22295,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataBlankWhenZeroClause" ):
                 listener.exitDataBlankWhenZeroClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataBlankWhenZeroClause" ):
-                return visitor.visitDataBlankWhenZeroClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -23705,12 +22359,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDataCommonOwnLocalClause" ):
                 listener.exitDataCommonOwnLocalClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataCommonOwnLocalClause" ):
-                return visitor.visitDataCommonOwnLocalClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -23767,12 +22415,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataExternalClause" ):
                 listener.exitDataExternalClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataExternalClause" ):
-                return visitor.visitDataExternalClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -23837,12 +22479,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDataGlobalClause" ):
                 listener.exitDataGlobalClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataGlobalClause" ):
-                return visitor.visitDataGlobalClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -23896,12 +22532,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDataIntegerStringClause" ):
                 listener.exitDataIntegerStringClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataIntegerStringClause" ):
-                return visitor.visitDataIntegerStringClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -23954,12 +22584,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataJustifiedClause" ):
                 listener.exitDataJustifiedClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataJustifiedClause" ):
-                return visitor.visitDataJustifiedClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -24059,12 +22683,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataOccursClause" ):
                 listener.exitDataOccursClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataOccursClause" ):
-                return visitor.visitDataOccursClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -24196,12 +22814,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDataOccursTo" ):
                 listener.exitDataOccursTo(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataOccursTo" ):
-                return visitor.visitDataOccursTo(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -24260,12 +22872,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataOccursSort" ):
                 listener.exitDataOccursSort(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataOccursSort" ):
-                return visitor.visitDataOccursSort(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -24354,12 +22960,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDataPictureClause" ):
                 listener.exitDataPictureClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataPictureClause" ):
-                return visitor.visitDataPictureClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -24427,12 +23027,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPictureString" ):
                 listener.exitPictureString(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPictureString" ):
-                return visitor.visitPictureString(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -24552,12 +23146,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPictureChars" ):
                 listener.exitPictureChars(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPictureChars" ):
-                return visitor.visitPictureChars(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -24690,12 +23278,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitPictureCardinality" ):
                 listener.exitPictureCardinality(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPictureCardinality" ):
-                return visitor.visitPictureCardinality(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -24752,12 +23334,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataReceivedByClause" ):
                 listener.exitDataReceivedByClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataReceivedByClause" ):
-                return visitor.visitDataReceivedByClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -24825,12 +23401,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDataRecordAreaClause" ):
                 listener.exitDataRecordAreaClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataRecordAreaClause" ):
-                return visitor.visitDataRecordAreaClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -24877,12 +23447,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataRedefinesClause" ):
                 listener.exitDataRedefinesClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataRedefinesClause" ):
-                return visitor.visitDataRedefinesClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -24939,12 +23503,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataRenamesClause" ):
                 listener.exitDataRenamesClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataRenamesClause" ):
-                return visitor.visitDataRenamesClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -25019,12 +23577,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataSignClause" ):
                 listener.exitDataSignClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataSignClause" ):
-                return visitor.visitDataSignClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -25114,12 +23666,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDataSynchronizedClause" ):
                 listener.exitDataSynchronizedClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataSynchronizedClause" ):
-                return visitor.visitDataSynchronizedClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -25182,12 +23728,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataThreadLocalClause" ):
                 listener.exitDataThreadLocalClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataThreadLocalClause" ):
-                return visitor.visitDataThreadLocalClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -25257,12 +23797,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDataTypeClause" ):
                 listener.exitDataTypeClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataTypeClause" ):
-                return visitor.visitDataTypeClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -25322,12 +23856,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataTypeDefClause" ):
                 listener.exitDataTypeDefClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataTypeDefClause" ):
-                return visitor.visitDataTypeDefClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -25477,12 +24005,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataUsageClause" ):
                 listener.exitDataUsageClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataUsageClause" ):
-                return visitor.visitDataUsageClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -25696,12 +24218,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDataUsingClause" ):
                 listener.exitDataUsingClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataUsingClause" ):
-                return visitor.visitDataUsingClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -25794,12 +24310,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataValueClause" ):
                 listener.exitDataValueClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataValueClause" ):
-                return visitor.visitDataValueClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -25898,12 +24408,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDataValueInterval" ):
                 listener.exitDataValueInterval(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataValueInterval" ):
-                return visitor.visitDataValueInterval(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -25958,12 +24462,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataValueIntervalFrom" ):
                 listener.exitDataValueIntervalFrom(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataValueIntervalFrom" ):
-                return visitor.visitDataValueIntervalFrom(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -26026,12 +24524,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDataValueIntervalTo" ):
                 listener.exitDataValueIntervalTo(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataValueIntervalTo" ):
-                return visitor.visitDataValueIntervalTo(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -26086,12 +24578,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataWithLowerBoundsClause" ):
                 listener.exitDataWithLowerBoundsClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataWithLowerBoundsClause" ):
-                return visitor.visitDataWithLowerBoundsClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -26166,12 +24652,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProcedureDivision" ):
                 listener.exitProcedureDivision(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProcedureDivision" ):
-                return visitor.visitProcedureDivision(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -26255,12 +24735,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitProcedureDivisionUsingClause" ):
                 listener.exitProcedureDivisionUsingClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProcedureDivisionUsingClause" ):
-                return visitor.visitProcedureDivisionUsingClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -26327,12 +24801,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitProcedureDivisionGivingClause" ):
                 listener.exitProcedureDivisionGivingClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProcedureDivisionGivingClause" ):
-                return visitor.visitProcedureDivisionGivingClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -26386,12 +24854,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProcedureDivisionUsingParameter" ):
                 listener.exitProcedureDivisionUsingParameter(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProcedureDivisionUsingParameter" ):
-                return visitor.visitProcedureDivisionUsingParameter(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -26456,12 +24918,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProcedureDivisionByReferencePhrase" ):
                 listener.exitProcedureDivisionByReferencePhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProcedureDivisionByReferencePhrase" ):
-                return visitor.visitProcedureDivisionByReferencePhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -26543,12 +24999,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProcedureDivisionByReference" ):
                 listener.exitProcedureDivisionByReference(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProcedureDivisionByReference" ):
-                return visitor.visitProcedureDivisionByReference(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -26635,12 +25085,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitProcedureDivisionByValuePhrase" ):
                 listener.exitProcedureDivisionByValuePhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProcedureDivisionByValuePhrase" ):
-                return visitor.visitProcedureDivisionByValuePhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -26712,12 +25156,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProcedureDivisionByValue" ):
                 listener.exitProcedureDivisionByValue(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProcedureDivisionByValue" ):
-                return visitor.visitProcedureDivisionByValue(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -26798,12 +25236,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitProcedureDeclaratives" ):
                 listener.exitProcedureDeclaratives(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProcedureDeclaratives" ):
-                return visitor.visitProcedureDeclaratives(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -26881,12 +25313,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitProcedureDeclarative" ):
                 listener.exitProcedureDeclarative(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProcedureDeclarative" ):
-                return visitor.visitProcedureDeclarative(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -26943,12 +25369,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProcedureSectionHeader" ):
                 listener.exitProcedureSectionHeader(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProcedureSectionHeader" ):
-                return visitor.visitProcedureSectionHeader(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -27010,12 +25430,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitProcedureDivisionBody" ):
                 listener.exitProcedureDivisionBody(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProcedureDivisionBody" ):
-                return visitor.visitProcedureDivisionBody(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -27076,12 +25490,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitProcedureSection" ):
                 listener.exitProcedureSection(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProcedureSection" ):
-                return visitor.visitProcedureSection(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -27137,12 +25545,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitParagraphs" ):
                 listener.exitParagraphs(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitParagraphs" ):
-                return visitor.visitParagraphs(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -27220,12 +25622,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitParagraph" ):
                 listener.exitParagraph(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitParagraph" ):
-                return visitor.visitParagraph(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -27298,12 +25694,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSentence" ):
                 listener.exitSentence(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSentence" ):
-                return visitor.visitSentence(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -27549,12 +25939,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStatement" ):
                 listener.exitStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStatement" ):
-                return visitor.visitStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -27876,12 +26260,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitAcceptStatement" ):
                 listener.exitAcceptStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAcceptStatement" ):
-                return visitor.visitAcceptStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -28002,12 +26380,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitAcceptFromDateStatement" ):
                 listener.exitAcceptFromDateStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAcceptFromDateStatement" ):
-                return visitor.visitAcceptFromDateStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -28124,12 +26496,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitAcceptFromMnemonicStatement" ):
                 listener.exitAcceptFromMnemonicStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAcceptFromMnemonicStatement" ):
-                return visitor.visitAcceptFromMnemonicStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -28179,12 +26545,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitAcceptFromEscapeKeyStatement" ):
                 listener.exitAcceptFromEscapeKeyStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAcceptFromEscapeKeyStatement" ):
-                return visitor.visitAcceptFromEscapeKeyStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -28232,12 +26592,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAcceptMessageCountStatement" ):
                 listener.exitAcceptMessageCountStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAcceptMessageCountStatement" ):
-                return visitor.visitAcceptMessageCountStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -28311,12 +26665,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAddStatement" ):
                 listener.exitAddStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAddStatement" ):
-                return visitor.visitAddStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -28416,12 +26764,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitAddToStatement" ):
                 listener.exitAddToStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAddToStatement" ):
-                return visitor.visitAddToStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -28511,12 +26853,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAddToGivingStatement" ):
                 listener.exitAddToGivingStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAddToGivingStatement" ):
-                return visitor.visitAddToGivingStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -28618,12 +26954,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitAddCorrespondingStatement" ):
                 listener.exitAddCorrespondingStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAddCorrespondingStatement" ):
-                return visitor.visitAddCorrespondingStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -28681,12 +27011,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAddFrom" ):
                 listener.exitAddFrom(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAddFrom" ):
-                return visitor.visitAddFrom(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -28746,12 +27070,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitAddTo" ):
                 listener.exitAddTo(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAddTo" ):
-                return visitor.visitAddTo(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -28806,12 +27124,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAddToGiving" ):
                 listener.exitAddToGiving(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAddToGiving" ):
-                return visitor.visitAddToGiving(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -28871,12 +27183,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitAddGiving" ):
                 listener.exitAddGiving(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAddGiving" ):
-                return visitor.visitAddGiving(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -28932,12 +27238,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlteredGoTo" ):
                 listener.exitAlteredGoTo(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAlteredGoTo" ):
-                return visitor.visitAlteredGoTo(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -28997,12 +27297,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlterStatement" ):
                 listener.exitAlterStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAlterStatement" ):
-                return visitor.visitAlterStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -29070,12 +27364,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlterProceedTo" ):
                 listener.exitAlterProceedTo(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAlterProceedTo" ):
-                return visitor.visitAlterProceedTo(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -29163,12 +27451,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCallStatement" ):
                 listener.exitCallStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCallStatement" ):
-                return visitor.visitCallStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -29281,12 +27563,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitCallUsingPhrase" ):
                 listener.exitCallUsingPhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCallUsingPhrase" ):
-                return visitor.visitCallUsingPhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -29350,12 +27626,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCallUsingParameter" ):
                 listener.exitCallUsingParameter(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCallUsingParameter" ):
-                return visitor.visitCallUsingParameter(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -29426,12 +27696,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCallByReferencePhrase" ):
                 listener.exitCallByReferencePhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCallByReferencePhrase" ):
-                return visitor.visitCallByReferencePhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -29526,12 +27790,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCallByReference" ):
                 listener.exitCallByReference(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCallByReference" ):
-                return visitor.visitCallByReference(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -29632,12 +27890,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitCallByValuePhrase" ):
                 listener.exitCallByValuePhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCallByValuePhrase" ):
-                return visitor.visitCallByValuePhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -29715,12 +27967,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCallByValue" ):
                 listener.exitCallByValue(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCallByValue" ):
-                return visitor.visitCallByValue(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -29808,12 +28054,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitCallByContentPhrase" ):
                 listener.exitCallByContentPhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCallByContentPhrase" ):
-                return visitor.visitCallByContentPhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -29894,12 +28134,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCallByContent" ):
                 listener.exitCallByContent(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCallByContent" ):
-                return visitor.visitCallByContent(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -29991,12 +28225,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitCallGivingPhrase" ):
                 listener.exitCallGivingPhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCallGivingPhrase" ):
-                return visitor.visitCallGivingPhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -30052,12 +28280,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCancelStatement" ):
                 listener.exitCancelStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCancelStatement" ):
-                return visitor.visitCancelStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -30127,12 +28349,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCancelCall" ):
                 listener.exitCancelCall(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCancelCall" ):
-                return visitor.visitCancelCall(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -30209,12 +28425,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitCloseStatement" ):
                 listener.exitCloseStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCloseStatement" ):
-                return visitor.visitCloseStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -30281,12 +28491,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCloseFile" ):
                 listener.exitCloseFile(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCloseFile" ):
-                return visitor.visitCloseFile(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -30365,12 +28569,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCloseReelUnitStatement" ):
                 listener.exitCloseReelUnitStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCloseReelUnitStatement" ):
-                return visitor.visitCloseReelUnitStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -30474,12 +28672,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitCloseRelativeStatement" ):
                 listener.exitCloseRelativeStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCloseRelativeStatement" ):
-                return visitor.visitCloseRelativeStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -30559,12 +28751,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitClosePortFileIOStatement" ):
                 listener.exitClosePortFileIOStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitClosePortFileIOStatement" ):
-                return visitor.visitClosePortFileIOStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -30663,12 +28849,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitClosePortFileIOUsing" ):
                 listener.exitClosePortFileIOUsing(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitClosePortFileIOUsing" ):
-                return visitor.visitClosePortFileIOUsing(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -30737,12 +28917,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitClosePortFileIOUsingCloseDisposition" ):
                 listener.exitClosePortFileIOUsingCloseDisposition(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitClosePortFileIOUsingCloseDisposition" ):
-                return visitor.visitClosePortFileIOUsingCloseDisposition(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -30807,12 +28981,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitClosePortFileIOUsingAssociatedData" ):
                 listener.exitClosePortFileIOUsingAssociatedData(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitClosePortFileIOUsingAssociatedData" ):
-                return visitor.visitClosePortFileIOUsingAssociatedData(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -30879,12 +29047,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitClosePortFileIOUsingAssociatedDataLength" ):
                 listener.exitClosePortFileIOUsingAssociatedDataLength(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitClosePortFileIOUsingAssociatedDataLength" ):
-                return visitor.visitClosePortFileIOUsingAssociatedDataLength(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -30978,12 +29140,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitComputeStatement" ):
                 listener.exitComputeStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitComputeStatement" ):
-                return visitor.visitComputeStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -31075,12 +29231,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitComputeStore" ):
                 listener.exitComputeStore(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitComputeStore" ):
-                return visitor.visitComputeStore(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -31130,12 +29280,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitContinueStatement" ):
                 listener.exitContinueStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitContinueStatement" ):
-                return visitor.visitContinueStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -31195,12 +29339,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDeleteStatement" ):
                 listener.exitDeleteStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDeleteStatement" ):
-                return visitor.visitDeleteStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -31307,12 +29445,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDisableStatement" ):
                 listener.exitDisableStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDisableStatement" ):
-                return visitor.visitDisableStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -31429,12 +29561,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDisplayStatement" ):
                 listener.exitDisplayStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDisplayStatement" ):
-                return visitor.visitDisplayStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -31518,12 +29644,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDisplayOperand" ):
                 listener.exitDisplayOperand(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDisplayOperand" ):
-                return visitor.visitDisplayOperand(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -31585,12 +29705,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDisplayAt" ):
                 listener.exitDisplayAt(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDisplayAt" ):
-                return visitor.visitDisplayAt(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -31655,12 +29769,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDisplayUpon" ):
                 listener.exitDisplayUpon(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDisplayUpon" ):
-                return visitor.visitDisplayUpon(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -31721,12 +29829,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDisplayWith" ):
                 listener.exitDisplayWith(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDisplayWith" ):
-                return visitor.visitDisplayWith(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -31814,12 +29916,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDivideStatement" ):
                 listener.exitDivideStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDivideStatement" ):
-                return visitor.visitDivideStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -31935,12 +30031,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDivideIntoStatement" ):
                 listener.exitDivideIntoStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDivideIntoStatement" ):
-                return visitor.visitDivideIntoStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -32006,12 +30096,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDivideIntoGivingStatement" ):
                 listener.exitDivideIntoGivingStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDivideIntoGivingStatement" ):
-                return visitor.visitDivideIntoGivingStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -32089,12 +30173,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDivideByGivingStatement" ):
                 listener.exitDivideByGivingStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDivideByGivingStatement" ):
-                return visitor.visitDivideByGivingStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -32166,12 +30244,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDivideGivingPhrase" ):
                 listener.exitDivideGivingPhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDivideGivingPhrase" ):
-                return visitor.visitDivideGivingPhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -32230,12 +30302,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDivideInto" ):
                 listener.exitDivideInto(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDivideInto" ):
-                return visitor.visitDivideInto(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -32290,12 +30356,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitDivideGiving" ):
                 listener.exitDivideGiving(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDivideGiving" ):
-                return visitor.visitDivideGiving(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -32349,12 +30409,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDivideRemainder" ):
                 listener.exitDivideRemainder(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDivideRemainder" ):
-                return visitor.visitDivideRemainder(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -32428,12 +30482,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEnableStatement" ):
                 listener.exitEnableStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEnableStatement" ):
-                return visitor.visitEnableStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -32545,12 +30593,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitEntryStatement" ):
                 listener.exitEntryStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEntryStatement" ):
-                return visitor.visitEntryStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -32639,12 +30681,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEvaluateStatement" ):
                 listener.exitEvaluateStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEvaluateStatement" ):
-                return visitor.visitEvaluateStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -32743,12 +30779,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitEvaluateSelect" ):
                 listener.exitEvaluateSelect(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEvaluateSelect" ):
-                return visitor.visitEvaluateSelect(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -32819,12 +30849,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitEvaluateAlsoSelect" ):
                 listener.exitEvaluateAlsoSelect(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEvaluateAlsoSelect" ):
-                return visitor.visitEvaluateAlsoSelect(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -32878,12 +30902,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEvaluateWhenPhrase" ):
                 listener.exitEvaluateWhenPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEvaluateWhenPhrase" ):
-                return visitor.visitEvaluateWhenPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -32960,12 +30978,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitEvaluateWhen" ):
                 listener.exitEvaluateWhen(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEvaluateWhen" ):
-                return visitor.visitEvaluateWhen(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -33038,12 +31050,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEvaluateCondition" ):
                 listener.exitEvaluateCondition(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEvaluateCondition" ):
-                return visitor.visitEvaluateCondition(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -33135,12 +31141,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitEvaluateThrough" ):
                 listener.exitEvaluateThrough(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEvaluateThrough" ):
-                return visitor.visitEvaluateThrough(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -33194,12 +31194,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitEvaluateAlsoCondition" ):
                 listener.exitEvaluateAlsoCondition(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEvaluateAlsoCondition" ):
-                return visitor.visitEvaluateAlsoCondition(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -33252,12 +31246,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEvaluateWhenOther" ):
                 listener.exitEvaluateWhenOther(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEvaluateWhenOther" ):
-                return visitor.visitEvaluateWhenOther(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -33322,12 +31310,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitEvaluateValue" ):
                 listener.exitEvaluateValue(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEvaluateValue" ):
-                return visitor.visitEvaluateValue(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -33391,12 +31373,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitExecCicsStatement" ):
                 listener.exitExecCicsStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExecCicsStatement" ):
-                return visitor.visitExecCicsStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -33453,12 +31429,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitExecSqlStatement" ):
                 listener.exitExecSqlStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExecSqlStatement" ):
-                return visitor.visitExecSqlStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -33514,12 +31484,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExecSqlImsStatement" ):
                 listener.exitExecSqlImsStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExecSqlImsStatement" ):
-                return visitor.visitExecSqlImsStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -33586,12 +31550,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExhibitStatement" ):
                 listener.exitExhibitStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExhibitStatement" ):
-                return visitor.visitExhibitStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -33668,12 +31626,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitExhibitOperand" ):
                 listener.exitExhibitOperand(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExhibitOperand" ):
-                return visitor.visitExhibitOperand(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -33731,12 +31683,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitExitStatement" ):
                 listener.exitExitStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExitStatement" ):
-                return visitor.visitExitStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -33791,12 +31737,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitGenerateStatement" ):
                 listener.exitGenerateStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitGenerateStatement" ):
-                return visitor.visitGenerateStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -33839,12 +31779,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGobackStatement" ):
                 listener.exitGobackStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitGobackStatement" ):
-                return visitor.visitGobackStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -33897,12 +31831,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGoToStatement" ):
                 listener.exitGoToStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitGoToStatement" ):
-                return visitor.visitGoToStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -33969,12 +31897,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitGoToStatementSimple" ):
                 listener.exitGoToStatementSimple(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitGoToStatementSimple" ):
-                return visitor.visitGoToStatementSimple(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -34032,12 +31954,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGoToDependingOnStatement" ):
                 listener.exitGoToDependingOnStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitGoToDependingOnStatement" ):
-                return visitor.visitGoToDependingOnStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -34137,12 +32053,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitIfStatement" ):
                 listener.exitIfStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitIfStatement" ):
-                return visitor.visitIfStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -34216,12 +32126,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIfThen" ):
                 listener.exitIfThen(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitIfThen" ):
-                return visitor.visitIfThen(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -34309,12 +32213,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitIfElse" ):
                 listener.exitIfElse(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitIfElse" ):
-                return visitor.visitIfElse(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -34392,12 +32290,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitInitializeStatement" ):
                 listener.exitInitializeStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInitializeStatement" ):
-                return visitor.visitInitializeStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -34466,12 +32358,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInitializeReplacingPhrase" ):
                 listener.exitInitializeReplacingPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInitializeReplacingPhrase" ):
-                return visitor.visitInitializeReplacingPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -34565,12 +32451,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitInitializeReplacingBy" ):
                 listener.exitInitializeReplacingBy(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInitializeReplacingBy" ):
-                return visitor.visitInitializeReplacingBy(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -34649,12 +32529,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitInitiateStatement" ):
                 listener.exitInitiateStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInitiateStatement" ):
-                return visitor.visitInitiateStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -34728,12 +32602,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInspectStatement" ):
                 listener.exitInspectStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInspectStatement" ):
-                return visitor.visitInspectStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -34809,12 +32677,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitInspectTallyingPhrase" ):
                 listener.exitInspectTallyingPhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInspectTallyingPhrase" ):
-                return visitor.visitInspectTallyingPhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -34882,12 +32744,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInspectReplacingPhrase" ):
                 listener.exitInspectReplacingPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInspectReplacingPhrase" ):
-                return visitor.visitInspectReplacingPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -34968,12 +32824,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInspectTallyingReplacingPhrase" ):
                 listener.exitInspectTallyingReplacingPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInspectTallyingReplacingPhrase" ):
-                return visitor.visitInspectTallyingReplacingPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -35059,12 +32909,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInspectConvertingPhrase" ):
                 listener.exitInspectConvertingPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInspectConvertingPhrase" ):
-                return visitor.visitInspectConvertingPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -35152,12 +32996,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitInspectFor" ):
                 listener.exitInspectFor(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInspectFor" ):
-                return visitor.visitInspectFor(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -35233,12 +33071,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitInspectCharacters" ):
                 listener.exitInspectCharacters(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInspectCharacters" ):
-                return visitor.visitInspectCharacters(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -35301,12 +33133,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInspectReplacingCharacters" ):
                 listener.exitInspectReplacingCharacters(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInspectReplacingCharacters" ):
-                return visitor.visitInspectReplacingCharacters(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -35371,12 +33197,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInspectAllLeadings" ):
                 listener.exitInspectAllLeadings(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInspectAllLeadings" ):
-                return visitor.visitInspectAllLeadings(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -35452,12 +33272,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitInspectReplacingAllLeadings" ):
                 listener.exitInspectReplacingAllLeadings(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInspectReplacingAllLeadings" ):
-                return visitor.visitInspectReplacingAllLeadings(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -35530,12 +33344,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInspectAllLeading" ):
                 listener.exitInspectAllLeading(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInspectAllLeading" ):
-                return visitor.visitInspectAllLeading(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -35617,12 +33425,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitInspectReplacingAllLeading" ):
                 listener.exitInspectReplacingAllLeading(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInspectReplacingAllLeading" ):
-                return visitor.visitInspectReplacingAllLeading(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -35697,12 +33499,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitInspectBy" ):
                 listener.exitInspectBy(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInspectBy" ):
-                return visitor.visitInspectBy(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -35765,12 +33561,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInspectTo" ):
                 listener.exitInspectTo(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInspectTo" ):
-                return visitor.visitInspectTo(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -35840,12 +33630,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInspectBeforeAfter" ):
                 listener.exitInspectBeforeAfter(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInspectBeforeAfter" ):
-                return visitor.visitInspectBeforeAfter(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -35948,12 +33732,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMergeStatement" ):
                 listener.exitMergeStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMergeStatement" ):
-                return visitor.visitMergeStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -36065,12 +33843,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitMergeOnKeyClause" ):
                 listener.exitMergeOnKeyClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMergeOnKeyClause" ):
-                return visitor.visitMergeOnKeyClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -36166,12 +33938,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMergeCollatingSequencePhrase" ):
                 listener.exitMergeCollatingSequencePhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMergeCollatingSequencePhrase" ):
-                return visitor.visitMergeCollatingSequencePhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -36271,12 +34037,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitMergeCollatingAlphanumeric" ):
                 listener.exitMergeCollatingAlphanumeric(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMergeCollatingAlphanumeric" ):
-                return visitor.visitMergeCollatingAlphanumeric(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -36340,12 +34100,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMergeCollatingNational" ):
                 listener.exitMergeCollatingNational(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMergeCollatingNational" ):
-                return visitor.visitMergeCollatingNational(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -36414,12 +34168,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitMergeUsing" ):
                 listener.exitMergeUsing(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMergeUsing" ):
-                return visitor.visitMergeUsing(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -36487,12 +34235,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMergeOutputProcedurePhrase" ):
                 listener.exitMergeOutputProcedurePhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMergeOutputProcedurePhrase" ):
-                return visitor.visitMergeOutputProcedurePhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -36563,12 +34305,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitMergeOutputThrough" ):
                 listener.exitMergeOutputThrough(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMergeOutputThrough" ):
-                return visitor.visitMergeOutputThrough(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -36624,12 +34360,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMergeGivingPhrase" ):
                 listener.exitMergeGivingPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMergeGivingPhrase" ):
-                return visitor.visitMergeGivingPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -36709,12 +34439,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMergeGiving" ):
                 listener.exitMergeGiving(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMergeGiving" ):
-                return visitor.visitMergeGiving(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -36802,12 +34526,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitMoveStatement" ):
                 listener.exitMoveStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMoveStatement" ):
-                return visitor.visitMoveStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -36882,12 +34600,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitMoveToStatement" ):
                 listener.exitMoveToStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMoveToStatement" ):
-                return visitor.visitMoveToStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -36948,12 +34660,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMoveToSendingArea" ):
                 listener.exitMoveToSendingArea(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMoveToSendingArea" ):
-                return visitor.visitMoveToSendingArea(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -37026,12 +34732,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitMoveCorrespondingToStatement" ):
                 listener.exitMoveCorrespondingToStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMoveCorrespondingToStatement" ):
-                return visitor.visitMoveCorrespondingToStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -37095,12 +34795,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMoveCorrespondingToSendingArea" ):
                 listener.exitMoveCorrespondingToSendingArea(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMoveCorrespondingToSendingArea" ):
-                return visitor.visitMoveCorrespondingToSendingArea(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -37172,12 +34866,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMultiplyStatement" ):
                 listener.exitMultiplyStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMultiplyStatement" ):
-                return visitor.visitMultiplyStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -37278,12 +34966,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitMultiplyRegular" ):
                 listener.exitMultiplyRegular(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMultiplyRegular" ):
-                return visitor.visitMultiplyRegular(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -37339,12 +35021,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMultiplyRegularOperand" ):
                 listener.exitMultiplyRegularOperand(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMultiplyRegularOperand" ):
-                return visitor.visitMultiplyRegularOperand(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -37407,12 +35083,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitMultiplyGiving" ):
                 listener.exitMultiplyGiving(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMultiplyGiving" ):
-                return visitor.visitMultiplyGiving(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -37474,12 +35144,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitMultiplyGivingOperand" ):
                 listener.exitMultiplyGivingOperand(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMultiplyGivingOperand" ):
-                return visitor.visitMultiplyGivingOperand(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -37537,12 +35201,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMultiplyGivingResult" ):
                 listener.exitMultiplyGivingResult(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMultiplyGivingResult" ):
-                return visitor.visitMultiplyGivingResult(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -37621,12 +35279,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOpenStatement" ):
                 listener.exitOpenStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOpenStatement" ):
-                return visitor.visitOpenStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -37709,12 +35361,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitOpenInputStatement" ):
                 listener.exitOpenInputStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOpenInputStatement" ):
-                return visitor.visitOpenInputStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -37781,12 +35427,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOpenInput" ):
                 listener.exitOpenInput(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOpenInput" ):
-                return visitor.visitOpenInput(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -37859,12 +35499,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitOpenOutputStatement" ):
                 listener.exitOpenOutputStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOpenOutputStatement" ):
-                return visitor.visitOpenOutputStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -37928,12 +35562,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOpenOutput" ):
                 listener.exitOpenOutput(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOpenOutput" ):
-                return visitor.visitOpenOutput(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -38002,12 +35630,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitOpenIOStatement" ):
                 listener.exitOpenIOStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOpenIOStatement" ):
-                return visitor.visitOpenIOStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -38068,12 +35690,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOpenExtendStatement" ):
                 listener.exitOpenExtendStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOpenExtendStatement" ):
-                return visitor.visitOpenExtendStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -38136,12 +35752,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPerformStatement" ):
                 listener.exitPerformStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPerformStatement" ):
-                return visitor.visitPerformStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -38208,12 +35818,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPerformInlineStatement" ):
                 listener.exitPerformInlineStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPerformInlineStatement" ):
-                return visitor.visitPerformInlineStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -38289,12 +35893,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitPerformProcedureStatement" ):
                 listener.exitPerformProcedureStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPerformProcedureStatement" ):
-                return visitor.visitPerformProcedureStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -38369,12 +35967,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitPerformType" ):
                 listener.exitPerformType(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPerformType" ):
-                return visitor.visitPerformType(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -38443,12 +36035,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitPerformTimes" ):
                 listener.exitPerformTimes(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPerformTimes" ):
-                return visitor.visitPerformTimes(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -38512,12 +36098,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitPerformUntil" ):
                 listener.exitPerformUntil(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPerformUntil" ):
-                return visitor.visitPerformUntil(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -38574,12 +36154,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPerformVarying" ):
                 listener.exitPerformVarying(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPerformVarying" ):
-                return visitor.visitPerformVarying(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -38656,12 +36230,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitPerformVaryingClause" ):
                 listener.exitPerformVaryingClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPerformVaryingClause" ):
-                return visitor.visitPerformVaryingClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -38733,12 +36301,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitPerformVaryingPhrase" ):
                 listener.exitPerformVaryingPhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPerformVaryingPhrase" ):
-                return visitor.visitPerformVaryingPhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -38802,12 +36364,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitPerformAfter" ):
                 listener.exitPerformAfter(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPerformAfter" ):
-                return visitor.visitPerformAfter(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -38862,12 +36418,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPerformFrom" ):
                 listener.exitPerformFrom(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPerformFrom" ):
-                return visitor.visitPerformFrom(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -38941,12 +36491,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitPerformBy" ):
                 listener.exitPerformBy(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPerformBy" ):
-                return visitor.visitPerformBy(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -39016,12 +36560,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitPerformTestClause" ):
                 listener.exitPerformTestClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPerformTestClause" ):
-                return visitor.visitPerformTestClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -39085,12 +36623,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPurgeStatement" ):
                 listener.exitPurgeStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPurgeStatement" ):
-                return visitor.visitPurgeStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -39186,12 +36718,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReadStatement" ):
                 listener.exitReadStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReadStatement" ):
-                return visitor.visitReadStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -39321,12 +36847,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReadInto" ):
                 listener.exitReadInto(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReadInto" ):
-                return visitor.visitReadInto(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -39381,12 +36901,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReadWith" ):
                 listener.exitReadWith(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReadWith" ):
-                return visitor.visitReadWith(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -39464,12 +36978,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReadKey" ):
                 listener.exitReadKey(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReadKey" ):
-                return visitor.visitReadKey(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -39540,12 +37048,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReceiveStatement" ):
                 listener.exitReceiveStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReceiveStatement" ):
-                return visitor.visitReceiveStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -39669,12 +37171,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReceiveFromStatement" ):
                 listener.exitReceiveFromStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReceiveFromStatement" ):
-                return visitor.visitReceiveFromStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -39765,12 +37261,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReceiveFrom" ):
                 listener.exitReceiveFrom(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReceiveFrom" ):
-                return visitor.visitReceiveFrom(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -39858,12 +37348,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReceiveIntoStatement" ):
                 listener.exitReceiveIntoStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReceiveIntoStatement" ):
-                return visitor.visitReceiveIntoStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -39949,12 +37433,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReceiveNoData" ):
                 listener.exitReceiveNoData(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReceiveNoData" ):
-                return visitor.visitReceiveNoData(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -40018,12 +37496,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReceiveWithData" ):
                 listener.exitReceiveWithData(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReceiveWithData" ):
-                return visitor.visitReceiveWithData(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -40089,12 +37561,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReceiveBefore" ):
                 listener.exitReceiveBefore(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReceiveBefore" ):
-                return visitor.visitReceiveBefore(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -40165,12 +37631,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReceiveWith" ):
                 listener.exitReceiveWith(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReceiveWith" ):
-                return visitor.visitReceiveWith(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -40229,12 +37689,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReceiveThread" ):
                 listener.exitReceiveThread(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReceiveThread" ):
-                return visitor.visitReceiveThread(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -40298,12 +37752,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReceiveSize" ):
                 listener.exitReceiveSize(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReceiveSize" ):
-                return visitor.visitReceiveSize(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -40376,12 +37824,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReceiveStatus" ):
                 listener.exitReceiveStatus(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReceiveStatus" ):
-                return visitor.visitReceiveStatus(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -40444,12 +37886,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReleaseStatement" ):
                 listener.exitReleaseStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReleaseStatement" ):
-                return visitor.visitReleaseStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -40526,12 +37962,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReturnStatement" ):
                 listener.exitReturnStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReturnStatement" ):
-                return visitor.visitReturnStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -40615,12 +38045,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReturnInto" ):
                 listener.exitReturnInto(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReturnInto" ):
-                return visitor.visitReturnInto(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -40682,12 +38106,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRewriteStatement" ):
                 listener.exitRewriteStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRewriteStatement" ):
-                return visitor.visitRewriteStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -40769,12 +38187,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitRewriteFrom" ):
                 listener.exitRewriteFrom(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRewriteFrom" ):
-                return visitor.visitRewriteFrom(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -40842,12 +38254,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSearchStatement" ):
                 listener.exitSearchStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSearchStatement" ):
-                return visitor.visitSearchStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -40943,12 +38349,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSearchVarying" ):
                 listener.exitSearchVarying(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSearchVarying" ):
-                return visitor.visitSearchVarying(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -41008,12 +38408,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSearchWhen" ):
                 listener.exitSearchWhen(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSearchWhen" ):
-                return visitor.visitSearchWhen(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -41098,12 +38492,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSendStatement" ):
                 listener.exitSendStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSendStatement" ):
-                return visitor.visitSendStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -41196,12 +38584,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSendStatementSync" ):
                 listener.exitSendStatementSync(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSendStatementSync" ):
-                return visitor.visitSendStatementSync(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -41299,12 +38681,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSendStatementAsync" ):
                 listener.exitSendStatementAsync(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSendStatementAsync" ):
-                return visitor.visitSendStatementAsync(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -41359,12 +38735,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSendFromPhrase" ):
                 listener.exitSendFromPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSendFromPhrase" ):
-                return visitor.visitSendFromPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -41421,12 +38791,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSendWithPhrase" ):
                 listener.exitSendWithPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSendWithPhrase" ):
-                return visitor.visitSendWithPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -41493,12 +38857,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSendReplacingPhrase" ):
                 listener.exitSendReplacingPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSendReplacingPhrase" ):
-                return visitor.visitSendReplacingPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -41567,12 +38925,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSendAdvancingPhrase" ):
                 listener.exitSendAdvancingPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSendAdvancingPhrase" ):
-                return visitor.visitSendAdvancingPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -41648,12 +39000,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSendAdvancingPage" ):
                 listener.exitSendAdvancingPage(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSendAdvancingPage" ):
-                return visitor.visitSendAdvancingPage(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -41705,12 +39051,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSendAdvancingLines" ):
                 listener.exitSendAdvancingLines(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSendAdvancingLines" ):
-                return visitor.visitSendAdvancingLines(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -41780,12 +39120,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSendAdvancingMnemonic" ):
                 listener.exitSendAdvancingMnemonic(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSendAdvancingMnemonic" ):
-                return visitor.visitSendAdvancingMnemonic(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -41837,12 +39171,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSetStatement" ):
                 listener.exitSetStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSetStatement" ):
-                return visitor.visitSetStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -41923,12 +39251,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSetToStatement" ):
                 listener.exitSetToStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSetToStatement" ):
-                return visitor.visitSetToStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -42015,12 +39337,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSetUpDownByStatement" ):
                 listener.exitSetUpDownByStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSetUpDownByStatement" ):
-                return visitor.visitSetUpDownByStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -42094,12 +39410,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSetTo" ):
                 listener.exitSetTo(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSetTo" ):
-                return visitor.visitSetTo(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -42154,12 +39464,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSetToValue" ):
                 listener.exitSetToValue(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSetToValue" ):
-                return visitor.visitSetToValue(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -42251,12 +39555,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSetByValue" ):
                 listener.exitSetByValue(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSetByValue" ):
-                return visitor.visitSetByValue(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -42352,12 +39650,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSortStatement" ):
                 listener.exitSortStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSortStatement" ):
-                return visitor.visitSortStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -42485,12 +39777,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSortOnKeyClause" ):
                 listener.exitSortOnKeyClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSortOnKeyClause" ):
-                return visitor.visitSortOnKeyClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -42574,12 +39860,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSortDuplicatesPhrase" ):
                 listener.exitSortDuplicatesPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSortDuplicatesPhrase" ):
-                return visitor.visitSortDuplicatesPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -42667,12 +39947,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSortCollatingSequencePhrase" ):
                 listener.exitSortCollatingSequencePhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSortCollatingSequencePhrase" ):
-                return visitor.visitSortCollatingSequencePhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -42772,12 +40046,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSortCollatingAlphanumeric" ):
                 listener.exitSortCollatingAlphanumeric(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSortCollatingAlphanumeric" ):
-                return visitor.visitSortCollatingAlphanumeric(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -42841,12 +40109,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSortCollatingNational" ):
                 listener.exitSortCollatingNational(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSortCollatingNational" ):
-                return visitor.visitSortCollatingNational(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -42922,12 +40184,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSortInputProcedurePhrase" ):
                 listener.exitSortInputProcedurePhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSortInputProcedurePhrase" ):
-                return visitor.visitSortInputProcedurePhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -42997,12 +40253,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSortInputThrough" ):
                 listener.exitSortInputThrough(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSortInputThrough" ):
-                return visitor.visitSortInputThrough(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -43058,12 +40308,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSortUsing" ):
                 listener.exitSortUsing(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSortUsing" ):
-                return visitor.visitSortUsing(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -43132,12 +40376,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSortOutputProcedurePhrase" ):
                 listener.exitSortOutputProcedurePhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSortOutputProcedurePhrase" ):
-                return visitor.visitSortOutputProcedurePhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -43208,12 +40446,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSortOutputThrough" ):
                 listener.exitSortOutputThrough(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSortOutputThrough" ):
-                return visitor.visitSortOutputThrough(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -43269,12 +40501,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSortGivingPhrase" ):
                 listener.exitSortGivingPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSortGivingPhrase" ):
-                return visitor.visitSortGivingPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -43354,12 +40580,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSortGiving" ):
                 listener.exitSortGiving(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSortGiving" ):
-                return visitor.visitSortGiving(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -43454,12 +40674,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStartStatement" ):
                 listener.exitStartStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStartStatement" ):
-                return visitor.visitStartStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -43576,12 +40790,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStartKey" ):
                 listener.exitStartKey(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStartKey" ):
-                return visitor.visitStartKey(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -43734,12 +40942,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitStopStatement" ):
                 listener.exitStopStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStopStatement" ):
-                return visitor.visitStopStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -43820,12 +41022,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStringStatement" ):
                 listener.exitStringStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStringStatement" ):
-                return visitor.visitStringStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -43927,12 +41123,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitStringSendingPhrase" ):
                 listener.exitStringSendingPhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStringSendingPhrase" ):
-                return visitor.visitStringSendingPhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -44004,12 +41194,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitStringSending" ):
                 listener.exitStringSending(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStringSending" ):
-                return visitor.visitStringSending(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -44077,12 +41261,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStringDelimitedByPhrase" ):
                 listener.exitStringDelimitedByPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStringDelimitedByPhrase" ):
-                return visitor.visitStringDelimitedByPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -44161,12 +41339,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitStringForPhrase" ):
                 listener.exitStringForPhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStringForPhrase" ):
-                return visitor.visitStringForPhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -44226,12 +41398,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitStringIntoPhrase" ):
                 listener.exitStringIntoPhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStringIntoPhrase" ):
-                return visitor.visitStringIntoPhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -44281,12 +41447,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStringWithPointerPhrase" ):
                 listener.exitStringWithPointerPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStringWithPointerPhrase" ):
-                return visitor.visitStringWithPointerPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -44362,12 +41522,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSubtractStatement" ):
                 listener.exitSubtractStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSubtractStatement" ):
-                return visitor.visitSubtractStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -44467,12 +41621,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSubtractFromStatement" ):
                 listener.exitSubtractFromStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSubtractFromStatement" ):
-                return visitor.visitSubtractFromStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -44560,12 +41708,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSubtractFromGivingStatement" ):
                 listener.exitSubtractFromGivingStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSubtractFromGivingStatement" ):
-                return visitor.visitSubtractFromGivingStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -44650,12 +41792,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSubtractCorrespondingStatement" ):
                 listener.exitSubtractCorrespondingStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSubtractCorrespondingStatement" ):
-                return visitor.visitSubtractCorrespondingStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -44713,12 +41849,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSubtractSubtrahend" ):
                 listener.exitSubtractSubtrahend(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSubtractSubtrahend" ):
-                return visitor.visitSubtractSubtrahend(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -44778,12 +41908,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSubtractMinuend" ):
                 listener.exitSubtractMinuend(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSubtractMinuend" ):
-                return visitor.visitSubtractMinuend(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -44838,12 +41962,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSubtractMinuendGiving" ):
                 listener.exitSubtractMinuendGiving(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSubtractMinuendGiving" ):
-                return visitor.visitSubtractMinuendGiving(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -44903,12 +42021,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSubtractGiving" ):
                 listener.exitSubtractGiving(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSubtractGiving" ):
-                return visitor.visitSubtractGiving(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -44963,12 +42075,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSubtractMinuendCorresponding" ):
                 listener.exitSubtractMinuendCorresponding(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSubtractMinuendCorresponding" ):
-                return visitor.visitSubtractMinuendCorresponding(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -45022,12 +42128,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTerminateStatement" ):
                 listener.exitTerminateStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTerminateStatement" ):
-                return visitor.visitTerminateStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -45098,12 +42198,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUnstringStatement" ):
                 listener.exitUnstringStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUnstringStatement" ):
-                return visitor.visitUnstringStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -45203,12 +42297,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitUnstringSendingPhrase" ):
                 listener.exitUnstringSendingPhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUnstringSendingPhrase" ):
-                return visitor.visitUnstringSendingPhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -45282,12 +42370,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUnstringDelimitedByPhrase" ):
                 listener.exitUnstringDelimitedByPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUnstringDelimitedByPhrase" ):
-                return visitor.visitUnstringDelimitedByPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -45372,12 +42454,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitUnstringOrAllPhrase" ):
                 listener.exitUnstringOrAllPhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUnstringOrAllPhrase" ):
-                return visitor.visitUnstringOrAllPhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -45448,12 +42524,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitUnstringIntoPhrase" ):
                 listener.exitUnstringIntoPhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUnstringIntoPhrase" ):
-                return visitor.visitUnstringIntoPhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -45516,12 +42586,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUnstringInto" ):
                 listener.exitUnstringInto(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUnstringInto" ):
-                return visitor.visitUnstringInto(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -45588,12 +42652,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitUnstringDelimiterIn" ):
                 listener.exitUnstringDelimiterIn(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUnstringDelimiterIn" ):
-                return visitor.visitUnstringDelimiterIn(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -45652,12 +42710,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUnstringCountIn" ):
                 listener.exitUnstringCountIn(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUnstringCountIn" ):
-                return visitor.visitUnstringCountIn(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -45718,12 +42770,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitUnstringWithPointerPhrase" ):
                 listener.exitUnstringWithPointerPhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUnstringWithPointerPhrase" ):
-                return visitor.visitUnstringWithPointerPhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -45782,12 +42828,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUnstringTallyingPhrase" ):
                 listener.exitUnstringTallyingPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUnstringTallyingPhrase" ):
-                return visitor.visitUnstringTallyingPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -45848,12 +42888,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUseStatement" ):
                 listener.exitUseStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUseStatement" ):
-                return visitor.visitUseStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -45931,12 +42965,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUseAfterClause" ):
                 listener.exitUseAfterClause(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUseAfterClause" ):
-                return visitor.visitUseAfterClause(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -46031,12 +43059,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitUseAfterOn" ):
                 listener.exitUseAfterOn(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUseAfterOn" ):
-                return visitor.visitUseAfterOn(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -46130,12 +43152,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitUseDebugClause" ):
                 listener.exitUseDebugClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUseDebugClause" ):
-                return visitor.visitUseDebugClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -46226,12 +43242,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUseDebugOn" ):
                 listener.exitUseDebugOn(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUseDebugOn" ):
-                return visitor.visitUseDebugOn(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -46351,12 +43361,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitWriteStatement" ):
                 listener.exitWriteStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitWriteStatement" ):
-                return visitor.visitWriteStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -46465,12 +43469,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitWriteFromPhrase" ):
                 listener.exitWriteFromPhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitWriteFromPhrase" ):
-                return visitor.visitWriteFromPhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -46543,12 +43541,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitWriteAdvancingPhrase" ):
                 listener.exitWriteAdvancingPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitWriteAdvancingPhrase" ):
-                return visitor.visitWriteAdvancingPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -46624,12 +43616,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitWriteAdvancingPage" ):
                 listener.exitWriteAdvancingPage(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitWriteAdvancingPage" ):
-                return visitor.visitWriteAdvancingPage(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -46681,12 +43667,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitWriteAdvancingLines" ):
                 listener.exitWriteAdvancingLines(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitWriteAdvancingLines" ):
-                return visitor.visitWriteAdvancingLines(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -46756,12 +43736,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitWriteAdvancingMnemonic" ):
                 listener.exitWriteAdvancingMnemonic(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitWriteAdvancingMnemonic" ):
-                return visitor.visitWriteAdvancingMnemonic(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -46815,12 +43789,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitWriteAtEndOfPagePhrase" ):
                 listener.exitWriteAtEndOfPagePhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitWriteAtEndOfPagePhrase" ):
-                return visitor.visitWriteAtEndOfPagePhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -46904,12 +43872,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitWriteNotAtEndOfPagePhrase" ):
                 listener.exitWriteNotAtEndOfPagePhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitWriteNotAtEndOfPagePhrase" ):
-                return visitor.visitWriteNotAtEndOfPagePhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -46988,12 +43950,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitAtEndPhrase" ):
                 listener.exitAtEndPhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAtEndPhrase" ):
-                return visitor.visitAtEndPhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -47068,12 +44024,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitNotAtEndPhrase" ):
                 listener.exitNotAtEndPhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitNotAtEndPhrase" ):
-                return visitor.visitNotAtEndPhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -47146,12 +44096,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInvalidKeyPhrase" ):
                 listener.exitInvalidKeyPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInvalidKeyPhrase" ):
-                return visitor.visitInvalidKeyPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -47227,12 +44171,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitNotInvalidKeyPhrase" ):
                 listener.exitNotInvalidKeyPhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitNotInvalidKeyPhrase" ):
-                return visitor.visitNotInvalidKeyPhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -47305,12 +44243,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOnOverflowPhrase" ):
                 listener.exitOnOverflowPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOnOverflowPhrase" ):
-                return visitor.visitOnOverflowPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -47385,12 +44317,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitNotOnOverflowPhrase" ):
                 listener.exitNotOnOverflowPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitNotOnOverflowPhrase" ):
-                return visitor.visitNotOnOverflowPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -47467,12 +44393,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOnSizeErrorPhrase" ):
                 listener.exitOnSizeErrorPhrase(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOnSizeErrorPhrase" ):
-                return visitor.visitOnSizeErrorPhrase(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -47553,12 +44473,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitNotOnSizeErrorPhrase" ):
                 listener.exitNotOnSizeErrorPhrase(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitNotOnSizeErrorPhrase" ):
-                return visitor.visitNotOnSizeErrorPhrase(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -47634,12 +44548,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitOnExceptionClause" ):
                 listener.exitOnExceptionClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOnExceptionClause" ):
-                return visitor.visitOnExceptionClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -47714,12 +44622,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitNotOnExceptionClause" ):
                 listener.exitNotOnExceptionClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitNotOnExceptionClause" ):
-                return visitor.visitNotOnExceptionClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -47791,12 +44693,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitArithmeticExpression" ):
                 listener.exitArithmeticExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitArithmeticExpression" ):
-                return visitor.visitArithmeticExpression(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -47856,12 +44752,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitPlusMinus" ):
                 listener.exitPlusMinus(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPlusMinus" ):
-                return visitor.visitPlusMinus(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -47918,12 +44808,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMultDivs" ):
                 listener.exitMultDivs(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMultDivs" ):
-                return visitor.visitMultDivs(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -47983,12 +44867,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMultDiv" ):
                 listener.exitMultDiv(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMultDiv" ):
-                return visitor.visitMultDiv(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -48052,12 +44930,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPowers" ):
                 listener.exitPowers(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPowers" ):
-                return visitor.visitPowers(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -48128,12 +45000,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitPower" ):
                 listener.exitPower(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPower" ):
-                return visitor.visitPower(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -48191,12 +45057,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBasis" ):
                 listener.exitBasis(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitBasis" ):
-                return visitor.visitBasis(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -48270,12 +45130,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitCondition" ):
                 listener.exitCondition(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCondition" ):
-                return visitor.visitCondition(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -48341,12 +45195,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAndOrCondition" ):
                 listener.exitAndOrCondition(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAndOrCondition" ):
-                return visitor.visitAndOrCondition(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -48425,12 +45273,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitCombinableCondition" ):
                 listener.exitCombinableCondition(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCombinableCondition" ):
-                return visitor.visitCombinableCondition(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -48499,12 +45341,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSimpleCondition" ):
                 listener.exitSimpleCondition(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSimpleCondition" ):
-                return visitor.visitSimpleCondition(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -48604,12 +45440,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitClassCondition" ):
                 listener.exitClassCondition(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitClassCondition" ):
-                return visitor.visitClassCondition(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -48729,12 +45559,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitConditionNameReference" ):
                 listener.exitConditionNameReference(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitConditionNameReference" ):
-                return visitor.visitConditionNameReference(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -48842,12 +45666,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitConditionNameSubscriptReference" ):
                 listener.exitConditionNameSubscriptReference(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitConditionNameSubscriptReference" ):
-                return visitor.visitConditionNameSubscriptReference(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -48920,12 +45738,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRelationCondition" ):
                 listener.exitRelationCondition(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRelationCondition" ):
-                return visitor.visitRelationCondition(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -49003,12 +45815,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitRelationSignCondition" ):
                 listener.exitRelationSignCondition(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRelationSignCondition" ):
-                return visitor.visitRelationSignCondition(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -49082,12 +45888,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitRelationArithmeticComparison" ):
                 listener.exitRelationArithmeticComparison(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRelationArithmeticComparison" ):
-                return visitor.visitRelationArithmeticComparison(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -49147,12 +45947,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRelationCombinedComparison" ):
                 listener.exitRelationCombinedComparison(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRelationCombinedComparison" ):
-                return visitor.visitRelationCombinedComparison(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -49218,12 +46012,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRelationCombinedCondition" ):
                 listener.exitRelationCombinedCondition(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRelationCombinedCondition" ):
-                return visitor.visitRelationCombinedCondition(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -49327,12 +46115,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRelationalOperator" ):
                 listener.exitRelationalOperator(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRelationalOperator" ):
-                return visitor.visitRelationalOperator(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -49539,12 +46321,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitAbbreviation" ):
                 listener.exitAbbreviation(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAbbreviation" ):
-                return visitor.visitAbbreviation(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -49633,12 +46409,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIdentifier" ):
                 listener.exitIdentifier(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitIdentifier" ):
-                return visitor.visitIdentifier(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -49735,12 +46505,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTableCall" ):
                 listener.exitTableCall(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTableCall" ):
-                return visitor.visitTableCall(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -49858,12 +46622,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitFunctionCall" ):
                 listener.exitFunctionCall(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunctionCall" ):
-                return visitor.visitFunctionCall(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -49963,12 +46721,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitReferenceModifier" ):
                 listener.exitReferenceModifier(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReferenceModifier" ):
-                return visitor.visitReferenceModifier(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -50026,12 +46778,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitCharacterPosition" ):
                 listener.exitCharacterPosition(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCharacterPosition" ):
-                return visitor.visitCharacterPosition(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -50073,12 +46819,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLength" ):
                 listener.exitLength(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLength" ):
-                return visitor.visitLength(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -50136,12 +46876,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSubscript_" ):
                 listener.exitSubscript_(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSubscript_" ):
-                return visitor.visitSubscript_(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -50252,12 +46986,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitArgument" ):
                 listener.exitArgument(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitArgument" ):
-                return visitor.visitArgument(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -50359,12 +47087,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitQualifiedDataName" ):
                 listener.exitQualifiedDataName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitQualifiedDataName" ):
-                return visitor.visitQualifiedDataName(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -50446,12 +47168,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitQualifiedDataNameFormat1" ):
                 listener.exitQualifiedDataNameFormat1(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitQualifiedDataNameFormat1" ):
-                return visitor.visitQualifiedDataNameFormat1(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -50543,12 +47259,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitQualifiedDataNameFormat2" ):
                 listener.exitQualifiedDataNameFormat2(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitQualifiedDataNameFormat2" ):
-                return visitor.visitQualifiedDataNameFormat2(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -50597,12 +47307,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitQualifiedDataNameFormat3" ):
                 listener.exitQualifiedDataNameFormat3(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitQualifiedDataNameFormat3" ):
-                return visitor.visitQualifiedDataNameFormat3(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -50649,12 +47353,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitQualifiedDataNameFormat4" ):
                 listener.exitQualifiedDataNameFormat4(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitQualifiedDataNameFormat4" ):
-                return visitor.visitQualifiedDataNameFormat4(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -50703,12 +47401,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitQualifiedInData" ):
                 listener.exitQualifiedInData(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitQualifiedInData" ):
-                return visitor.visitQualifiedInData(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -50771,12 +47463,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitInData" ):
                 listener.exitInData(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInData" ):
-                return visitor.visitInData(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -50832,12 +47518,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInFile" ):
                 listener.exitInFile(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInFile" ):
-                return visitor.visitInFile(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -50895,12 +47575,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitInMnemonic" ):
                 listener.exitInMnemonic(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInMnemonic" ):
-                return visitor.visitInMnemonic(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -50956,12 +47630,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInSection" ):
                 listener.exitInSection(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInSection" ):
-                return visitor.visitInSection(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -51019,12 +47687,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitInLibrary" ):
                 listener.exitInLibrary(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInLibrary" ):
-                return visitor.visitInLibrary(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -51081,12 +47743,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitInTable" ):
                 listener.exitInTable(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInTable" ):
-                return visitor.visitInTable(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -51137,12 +47793,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitAlphabetName" ):
                 listener.exitAlphabetName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAlphabetName" ):
-                return visitor.visitAlphabetName(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -51184,12 +47834,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAssignmentName" ):
                 listener.exitAssignmentName(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAssignmentName" ):
-                return visitor.visitAssignmentName(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -51233,12 +47877,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitBasisName" ):
                 listener.exitBasisName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitBasisName" ):
-                return visitor.visitBasisName(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -51280,12 +47918,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCdName" ):
                 listener.exitCdName(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCdName" ):
-                return visitor.visitCdName(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -51329,12 +47961,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitClassName" ):
                 listener.exitClassName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitClassName" ):
-                return visitor.visitClassName(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -51376,12 +48002,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitComputerName" ):
                 listener.exitComputerName(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitComputerName" ):
-                return visitor.visitComputerName(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -51425,12 +48045,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitConditionName" ):
                 listener.exitConditionName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitConditionName" ):
-                return visitor.visitConditionName(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -51472,12 +48086,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataName" ):
                 listener.exitDataName(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataName" ):
-                return visitor.visitDataName(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -51526,12 +48134,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDataDescName" ):
                 listener.exitDataDescName(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataDescName" ):
-                return visitor.visitDataDescName(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -51594,12 +48196,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitEnvironmentName" ):
                 listener.exitEnvironmentName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEnvironmentName" ):
-                return visitor.visitEnvironmentName(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -51641,12 +48237,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFileName" ):
                 listener.exitFileName(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFileName" ):
-                return visitor.visitFileName(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -51704,12 +48294,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunctionName" ):
                 listener.exitFunctionName(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunctionName" ):
-                return visitor.visitFunctionName(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -51790,12 +48374,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitIndexName" ):
                 listener.exitIndexName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitIndexName" ):
-                return visitor.visitIndexName(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -51837,12 +48415,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLanguageName" ):
                 listener.exitLanguageName(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLanguageName" ):
-                return visitor.visitLanguageName(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -51886,12 +48458,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitLibraryName" ):
                 listener.exitLibraryName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibraryName" ):
-                return visitor.visitLibraryName(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -51934,12 +48500,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitLocalName" ):
                 listener.exitLocalName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLocalName" ):
-                return visitor.visitLocalName(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -51981,12 +48541,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMnemonicName" ):
                 listener.exitMnemonicName(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMnemonicName" ):
-                return visitor.visitMnemonicName(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -52033,12 +48587,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitParagraphName" ):
                 listener.exitParagraphName(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitParagraphName" ):
-                return visitor.visitParagraphName(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -52102,12 +48650,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProcedureName" ):
                 listener.exitProcedureName(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProcedureName" ):
-                return visitor.visitProcedureName(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -52176,12 +48718,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitProgramName" ):
                 listener.exitProgramName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProgramName" ):
-                return visitor.visitProgramName(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -52237,12 +48773,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitRecordName" ):
                 listener.exitRecordName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRecordName" ):
-                return visitor.visitRecordName(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -52284,12 +48814,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReportName" ):
                 listener.exitReportName(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReportName" ):
-                return visitor.visitReportName(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -52333,12 +48857,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitRoutineName" ):
                 listener.exitRoutineName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRoutineName" ):
-                return visitor.visitRoutineName(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -52380,12 +48898,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitScreenName" ):
                 listener.exitScreenName(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScreenName" ):
-                return visitor.visitScreenName(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -52432,12 +48944,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSectionName" ):
                 listener.exitSectionName(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSectionName" ):
-                return visitor.visitSectionName(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -52494,12 +49000,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSystemName" ):
                 listener.exitSystemName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSystemName" ):
-                return visitor.visitSystemName(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -52542,12 +49042,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSymbolicCharacter" ):
                 listener.exitSymbolicCharacter(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSymbolicCharacter" ):
-                return visitor.visitSymbolicCharacter(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -52589,12 +49083,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTextName" ):
                 listener.exitTextName(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTextName" ):
-                return visitor.visitTextName(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -53009,12 +49497,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitCobolWord" ):
                 listener.exitCobolWord(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCobolWord" ):
-                return visitor.visitCobolWord(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -53081,12 +49563,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLiteral" ):
                 listener.exitLiteral(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLiteral" ):
-                return visitor.visitLiteral(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -53169,12 +49645,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitBooleanLiteral" ):
                 listener.exitBooleanLiteral(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitBooleanLiteral" ):
-                return visitor.visitBooleanLiteral(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -53228,12 +49698,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitNumericLiteral" ):
                 listener.exitNumericLiteral(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitNumericLiteral" ):
-                return visitor.visitNumericLiteral(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -53303,12 +49767,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitIntegerLiteral" ):
                 listener.exitIntegerLiteral(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitIntegerLiteral" ):
-                return visitor.visitIntegerLiteral(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -53369,12 +49827,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCicsDfhRespLiteral" ):
                 listener.exitCicsDfhRespLiteral(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCicsDfhRespLiteral" ):
-                return visitor.visitCicsDfhRespLiteral(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -53448,12 +49900,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCicsDfhValueLiteral" ):
                 listener.exitCicsDfhValueLiteral(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCicsDfhValueLiteral" ):
-                return visitor.visitCicsDfhValueLiteral(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -53556,12 +50002,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFigurativeConstant" ):
                 listener.exitFigurativeConstant(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFigurativeConstant" ):
-                return visitor.visitFigurativeConstant(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -53764,12 +50204,6 @@ class Cobol85Parser ( Parser ):
             if hasattr( listener, "exitSpecialRegister" ):
                 listener.exitSpecialRegister(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSpecialRegister" ):
-                return visitor.visitSpecialRegister(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -53966,12 +50400,6 @@ class Cobol85Parser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCommentEntry" ):
                 listener.exitCommentEntry(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCommentEntry" ):
-                return visitor.visitCommentEntry(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 

@@ -34,4 +34,3 @@ class Locations(object):
         page = urlopen(starting_url)
         dataset_download_html = page.read()
         dataset_start_html = dataset_download_html.decode("utf-8")
-        import pdb; pdb.set_trace()
