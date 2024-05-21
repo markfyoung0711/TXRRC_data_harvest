@@ -86,3 +86,11 @@ https://github.com/mlbelobraydi/TXRRC_data_harvest/wiki/TXRRC-Data-Source-Refere
 If this code isn't what you are looking for, here is a list of other TXRRC projects on github.
 
 https://github.com/mlbelobraydi/TXRRC_data_harvest/wiki/Similar-projects
+
+## Generation of Python struct from Cobol Copybook Parser
+
+The RRC datasets have PDF files that define the COBOL Copybook statements.
+It would be nice to be able to pass these copybook fragments into a python tool
+that would then generate the struct format for parsing the raw binary stream.
+
+The work under [Cobol Parser](src/cobol_parser.md) addresses this desire.

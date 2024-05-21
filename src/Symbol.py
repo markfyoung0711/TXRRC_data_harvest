@@ -133,7 +133,11 @@ class Symbol:
         if self.start is not None and self.end is not None:
             pr_1_slice = f'Raw Memory Slice(1): {self.start+1}:{self.end+1}'
 
-        details = [pr_level, pr_name, pr_picture, pr_cardinality, pr_redefines, pr_occurs, pr_usage, pr_size, pr_1_slice, pr_slice]
+        pr_struct_format = None
+        if self.struct_format is not None:
+            pr_struct_format = f'Struct Format: {self.struct_format}'
+
+        details = [pr_level, pr_name, pr_picture, pr_cardinality, pr_redefines, pr_occurs, pr_usage, pr_size, pr_1_slice, pr_slice, pr_struct_format]
         pr_details = [x for x in details if x is not None]
         pr_details = ', '.join(pr_details)
 
