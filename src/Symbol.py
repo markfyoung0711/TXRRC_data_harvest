@@ -171,11 +171,19 @@ class SymbolTable:
         self.current_level.append(complete_symbol)
 
     def cleanup_redefined(self):
+        '''
+        Do not add to symbol table if symbol is REDEFINED
+        but also, any symbols under a REDEFINED level should
+        not be added either.  So have to "descend" into
+        lower levels.
+        '''
         new_table = []
+        redefined_level = None
         for level in self.table:
             new_table.append([])
             for symbol in level:
                 if symbol.name in self.redefined:
+                    redefined_level = symbol.level
                     continue
                 else:
                     new_table[-1].append(symbol)
@@ -357,3 +365,20 @@ class SymbolTable:
         self.set_occurs_format()
         self.finalize_struct_format()
         self.count_size()
+
+    def __len__(self):
+        return len(self.table)
+
+    def get_struct_format(self):
+        return self.struct_format
+
+    def find_table_level_symbol(self, symbol_name):
+        for level_number, level in enumerate(self.table):
+            for index, symbol in enumerate(level):
+                if symbol.name == symbol_name:
+                    return (self.table[level_number], level_number, symbol)
+
+        return (None, None, None)
+
+    def find_table(self, index):
+        return self.table[index]
