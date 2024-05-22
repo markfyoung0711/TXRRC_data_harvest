@@ -62,7 +62,7 @@ Level:01 Name:FIELD-MAST
 '''
 
 current_symbol = Symbol()
-symbol_table = SymbolTable()
+global_symbol_table = SymbolTable()
 
 def visit_to_generate_symbol_table(ctx:ParserRuleContext):
 
@@ -122,7 +122,7 @@ def visit_to_generate_symbol_table(ctx:ParserRuleContext):
 
             # Flush current symbol to start building a new one
             if _integer_literal == 1:
-                symbol_table.add_level()
+                global_symbol_table.add_level()
 
             current_symbol.reset()
             current_symbol.name = _data_name
@@ -268,7 +268,7 @@ def visit_to_generate_symbol_table(ctx:ParserRuleContext):
             raise Exception('unexpected result')
 
         if current_symbol.complete():
-            symbol_table.add_symbol(current_symbol)
+            global_symbol_table.add_symbol(current_symbol)
 
         return
 
@@ -279,9 +279,24 @@ def visit_to_generate_symbol_table(ctx:ParserRuleContext):
 # This class defines a complete listener for a parse tree produced by Cobol85Parser.
 class DataDivisionCobol85Listener(Cobol85Listener):
 
+    def __init__(self):
+        '''
+        Create a Cobol85Listener, specialize it to walk the File Section, generate symbol table and return it
+
+        Parameters:
+        -----------
+        symbol_table: SymbolTable, this will be filled in and can then be returned.
+        '''
+
+        super().__init__()
+        self.symbol_table = None
+
     # Enter a parse tree produced by Cobol85Parser#fileSection.
     def enterFileSection(self, ctx:Cobol85Parser.FileSectionContext):
         visit_to_generate_symbol_table(ctx)
-        symbol_table.cleanup_redefined()
-        symbol_table.finalize()
-        print(symbol_table)
+        self.symbol_table = global_symbol_table
+        self.symbol_table.cleanup_redefined()
+        self.symbol_table.finalize()
+
+    def get_symbol_table(self):
+        return self.symbol_table
