@@ -92,6 +92,9 @@ class Symbol:
 
         return new_symbol
 
+    def __repr__(self):
+        return self.__str__()
+
     def __str__(self):
         pr_level = None
         if self.level is not None:
@@ -182,8 +185,19 @@ class SymbolTable:
         for level in self.table:
             new_table.append([])
             for symbol in level:
+                if redefined_level:
+                    if symbol.level > redefined_level:
+                        if symbol.size == 0:
+                            redefined_level = None
+                        else:
+                            print(f'skipping enclosed Redefined {symbol}')
+                            continue
+                    else:
+                        redefined_level = None
+
                 if symbol.name in self.redefined:
                     redefined_level = symbol.level
+                    print(f'Skipping this redefined {symbol}')
                     continue
                 else:
                     new_table[-1].append(symbol)
