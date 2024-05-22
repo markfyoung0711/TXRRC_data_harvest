@@ -21,6 +21,8 @@ class Symbol:
     redefines: str = None
     occurs: int = None
     usage: str = None
+    size: int = None
+    occurs_adjusted_size: int = None
     start: int = None
     end: int = None
     struct_format: str = None
@@ -41,6 +43,7 @@ class Symbol:
         self.occurs = None
         self.usage = None
         self.size = None
+        self.occurs_adjusted_size = None
         self.start = None
         self.end = None
         self.struct = None
@@ -122,6 +125,10 @@ class Symbol:
         if self.size is not None:
             pr_size = f'Size: {self.size}'
 
+        pr_occurs_adjusted_size = None
+        if self.occurs_adjusted_size is not None:
+            pr_occurs_adjusted_size = f'Size: {self.occurs_adjusted_size}'
+
         pr_slice = None
         if self.start is not None and self.end is not None:
             pr_slice = f'Raw Memory Slice: {self.start}:{self.end}'
@@ -134,7 +141,7 @@ class Symbol:
         if self.struct_format is not None:
             pr_struct_format = f'Struct Format: {self.struct_format}'
 
-        details = [pr_level, pr_name, pr_picture, pr_cardinality, pr_redefines, pr_occurs, pr_usage, pr_size, pr_1_slice, pr_slice, pr_struct_format]
+        details = [pr_level, pr_name, pr_picture, pr_cardinality, pr_redefines, pr_occurs, pr_usage, pr_size, pr_1_slice, pr_slice, pr_struct_format, pr_occurs_adjusted_size]
         pr_details = [x for x in details if x is not None]
         pr_details = ', '.join(pr_details)
 
@@ -187,7 +194,7 @@ class SymbolTable:
     def __str__(self):
         _str = ''
         for counter, level in enumerate(self.table):
-            _str += '\nLevel 01\n'
+            _str += '\n\nLevel 01\n'
             for symbol in level:
                 _str += str(symbol) + '\n'
 
@@ -199,12 +206,12 @@ class SymbolTable:
 
         return _str
 
-    def finalize_sizes(self):
+    def count_size(self):
         '''compute whole size of level and compute individual offsets for a struct generation
         E.g.
         Symbol: Level: 2, Name: OIL-CODES, Size: 0 Offset: 0
         Symbol: Level: 3, Name: TYPE-REC, Picture: 9, Size: 1 Offset: 1
-        Symbol: Level: 3, Name: DIST, Picture: 999, Size: 3 Offset: 4 
+        Symbol: Level: 3, Name: DIST, Picture: 999, Size: 3 Offset: 4
         Symbol: Level: 3, Name: FIELD, Picture: 9, Cardinality: 8, Size: 8 Start: 5 End: 13
         Symbol: Level: 3, Name: OPR, Picture: 9, Cardinality: 6, Size: 6 Offset: 18
         Symbol: Level: 3, Name: LEASE, Picture: 9, Cardinality: 5, Size: 5 Offset: 23
@@ -215,40 +222,54 @@ class SymbolTable:
         self.sizes = []
         for level in self.table:
             size = 0
+            occurs_adjusted_size = 0
             for symbol in level:
                 # for the symbol
                 start = size
                 size += symbol.size
+                if symbol.occurs_adjusted_size is not None:
+                    occurs_adjusted_size += symbol.occurs_adjusted_size
                 end = size
                 symbol.start = start
                 symbol.end = end
-            self.sizes.append(size)
+            self.sizes.append(size + occurs_adjusted_size)
 
     def finalize_struct_format(self):
+        self.struct_format = []
+        for level in self.table:
+            struct_format = BYTE_ORDER
+            self.struct_format.append([])
+            for index, symbol in enumerate(level):
+                # 'Occurs' with size zero alreday has struct_format set
+                if symbol.struct_format is not None:
+                    struct_format += symbol.struct_format
+
+            self.struct_format[-1].append(struct_format)
+
+    def set_occurs_format(self):
         '''
         visit each symbol that has a size or occurs and compute the format from the size.
         usually it will just be {size}s (or a string of size).
         when occurs appears in a level variable that groups several other fields then
         the format has to be repeated by the number of Occurs.
 
-
-
         Consider these levels (pseudo-Cobol code):
+
         Level:3 Name:F-MONTH Occurs OCCURS 14
           Level:5 Name:FM-DATE Type: PIC 9 Cardinality 6
-          Level:5 Name:FM-DATE-REDF Redefines: REDEFINES FM-DATE 
-            Level:7 Name:FM-CCYY Type: PIC 9 Cardinality 4 
+          Level:5 Name:FM-DATE-REDF Redefines: REDEFINES FM-DATE
+            Level:7 Name:FM-CCYY Type: PIC 9 Cardinality 4
             Level:7 Name:FM-CCYY-REDF Redefines: REDEFINES FM-CCYY
-              Level:9 Name:FM-CC Type: PIC 99 
+              Level:9 Name:FM-CC Type: PIC 99
               Level:9 Name:FM-YR Type: PIC 99
             Level:7 Name:FM-MO Type: PIC 99
           Level:5 Name:FM-PW Type: PIC S9 Cardinality 3
           Level:5 Name:FM-AC Type: PIC S999V9 Cardinality 4
-          Level:5 Name:FILLER4 Type: PIC 9 Cardinality 4 
+          Level:5 Name:FILLER4 Type: PIC 9 Cardinality 4
           Level:5 Name:FM-OTHC Type: PIC 9
           Level:5 Name:FM-CHG Type: PIC 9
           Level:5 Name:FM-PROD-FACT Type: PIC S99V999
-          Level:5 Name:FM-SPLIT-PROD-FACT Type: PIC S99V999 
+          Level:5 Name:FM-SPLIT-PROD-FACT Type: PIC S99V999
           Level:5 Name:FM-SPLIT-PROD-FACT-DATE Type: PIC 99
           Level:5 Name:FM-JOHN Type: PIC 9
           Level:5 Name:FM-OTH Type: PIC S99999999V9999999
@@ -265,7 +286,7 @@ class SymbolTable:
         Symbol: Level: 9, Name: FM-CC, Picture: 99, Size: 2, Raw Memory Slice(1): 501:503, Raw Memory Slice: 500:502
         Symbol: Level: 9, Name: FM-YR, Picture: 99, Size: 2, Raw Memory Slice(1): 503:505, Raw Memory Slice: 502:504
         Symbol: Level: 7, Name: FM-MO, Picture: 99, Size: 2, Raw Memory Slice(1): 505:507, Raw Memory Slice: 504:506
-        Symbol: Level: 5, Name: FM-PW, Picture: S9, Cardinality: 3, Usage: ['COMP-3'], Size: 2, Raw Memory Slice(1): 507:509, Raw Memory Slice: 506:508   
+        Symbol: Level: 5, Name: FM-PW, Picture: S9, Cardinality: 3, Usage: ['COMP-3'], Size: 2, Raw Memory Slice(1): 507:509, Raw Memory Slice: 506:508
         Symbol: Level: 5, Name: FM-AC, Picture: S999V9, Cardinality: 4, Usage: ['COMP-3'], Size: 4, Raw Memory Slice(1): 509:513, Raw Memory Slice: 508:512
         Symbol: Level: 5, Name: FILLER4, Picture: 9, Cardinality: 4, Size: 4, Raw Memory Slice(1): 513:517, Raw Memory Slice: 512:516
         Symbol: Level: 5, Name: FM-OTHC, Picture: 9, Size: 1, Raw Memory Slice(1): 517:518, Raw Memory Slice: 516:517
@@ -274,23 +295,58 @@ class SymbolTable:
         Symbol: Level: 5, Name: FM-SPLIT-PROD-FACT, Picture: S99V999, Usage: ['COMP-3'], Size: 3, Raw Memory Slice(1): 522:525, Raw Memory Slice: 521:524
         Symbol: Level: 5, Name: FM-SPLIT-PROD-FACT-DATE, Picture: 99, Size: 2, Raw Memory Slice(1): 525:527, Raw Memory Slice: 524:526
         Symbol: Level: 5, Name: FM-JOHN, Picture: 9, Size: 1, Raw Memory Slice(1): 527:528, Raw Memory Slice: 526:527
-        Symbol: Level: 5, Name: FM-OTH, Picture: S99999999V9999999, Usage: ['COMP-3'], Size: 8, Raw Memory Slice(1): 528:536, Raw Memory Slice: 527:535 
+        Symbol: Level: 5, Name: FM-OTH, Picture: S99999999V9999999, Usage: ['COMP-3'], Size: 8, Raw Memory Slice(1): 528:536, Raw Memory Slice: 527:535
         Symbol: Level: 5, Name: FILLER5, Picture: X, Cardinality: 15, Size: 15, Raw Memory Slice(1): 536:551, Raw Memory Slice: 535:550
 
-
-
-
-
         '''
-        self.struct_format = []
         for level in self.table:
-            struct_format = BYTE_ORDER
-            self.struct_format.append([])
-            for symbol in level:
+            # prepare for occurs handling (for multiplying format)
+            occurs_struct_format = None
+            occurs_level = None
+            occurs_symbol = None
+            occurs_contents_size = 0
+            for index, symbol in enumerate(level):
+
+                if symbol.occurs is not None and symbol.size == 0:
+
+                    if occurs_struct_format is not None:
+                        print('flush last occurs')
+                        occurs_struct_format = occurs_struct_format * occurs_symbol.occurs
+                        occurs_symbol.struct_format = occurs_struct_format
+                        # Accounts for the Occurs adjustment.  So if Occurs - 15, this will be the size * 14
+                        occurs_symbol.occurs_adjusted_size = occurs_contents_size * (occurs_symbol.occurs - 1)
+
+                    print('start building occurs')
+                    occurs_struct_format = ''
+                    # save "occurs" symbol to update its "struct_format"
+                    occurs_symbol = symbol
+                    occurs_level = symbol.level
+                    continue
+
+                if occurs_level is not None and symbol.level <= occurs_level:
+                    print('new level after occurs. flush.')
+                    occurs_struct_format = occurs_struct_format * occurs_symbol.occurs
+                    occurs_symbol.struct_format = occurs_struct_format
+                    occurs_symbol.occurs_adjusted_size = occurs_contents_size * (occurs_symbol.occurs - 1)
+                    occurs_level = None
+
                 if symbol.struct_format is not None:
-                    struct_format += symbol.struct_format
-            self.struct_format[-1].append(struct_format)
+                    if occurs_symbol is not None:
+                        print(f'collecting occurs format for level {occurs_level}, {occurs_symbol.name}\n\t from {symbol}')
+                        occurs_struct_format += symbol.struct_format
+                        occurs_contents_size += symbol.size
+                        symbol.struct_format = None
+
+            # if it was the last element
+            if occurs_struct_format is not None:
+                print('adding occurs format at end of symbol')
+                occurs_struct_format = occurs_struct_format * occurs_symbol.occurs
+                occurs_symbol.struct_format = occurs_struct_format
+                # Accounts for the Occurs adjustment.  So if Occurs - 15, this will be the size * 14
+                occurs_symbol.occurs_adjusted_size = occurs_contents_size * (occurs_symbol.occurs - 1)
+
 
     def finalize(self):
-        self.finalize_sizes()
+        self.set_occurs_format()
         self.finalize_struct_format()
+        self.count_size()

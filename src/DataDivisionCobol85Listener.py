@@ -258,7 +258,7 @@ def visit_to_generate_symbol_table(ctx:ParserRuleContext):
                     _occurs.append(cindex.OCCURS().getText())
                     occurs_number = str(cindex.integerLiteral().getText())
                     _occurs.append(occurs_number)
-                    current_symbol.occurs = occurs_number
+                    current_symbol.occurs = int(occurs_number)
             _occurs_string = ''
             if len(_occurs) > 0:
                 _occurs_string = ' Occurs ' + ' '.join(_occurs)
