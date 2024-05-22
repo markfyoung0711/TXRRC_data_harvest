@@ -141,7 +141,7 @@ class Symbol:
         if self.struct_format is not None:
             pr_struct_format = f'Struct Format: {self.struct_format}'
 
-        details = [pr_level, pr_name, pr_picture, pr_cardinality, pr_redefines, pr_occurs, pr_usage, pr_size, pr_1_slice, pr_slice, pr_struct_format, pr_occurs_adjusted_size]
+        details = [pr_level, pr_name, pr_picture, pr_cardinality, pr_redefines, pr_occurs, pr_usage, pr_size, pr_struct_format, pr_occurs_adjusted_size, pr_slice, pr_1_slice]
         pr_details = [x for x in details if x is not None]
         pr_details = ', '.join(pr_details)
 
@@ -301,9 +301,9 @@ class SymbolTable:
         '''
         for level in self.table:
             # prepare for occurs handling (for multiplying format)
-            occurs_struct_format = None
-            occurs_level = None
             occurs_symbol = None
+            occurs_level = None
+            occurs_struct_format = None
             occurs_contents_size = 0
             for index, symbol in enumerate(level):
 
@@ -315,12 +315,16 @@ class SymbolTable:
                         occurs_symbol.struct_format = occurs_struct_format
                         # Accounts for the Occurs adjustment.  So if Occurs - 15, this will be the size * 14
                         occurs_symbol.occurs_adjusted_size = occurs_contents_size * (occurs_symbol.occurs - 1)
+                        occurs_symbol = None
+                        occurs_level = None
+                        occurs_struct_format = None
+                        occurs_contents_size = 0
 
                     print('start building occurs')
-                    occurs_struct_format = ''
-                    # save "occurs" symbol to update its "struct_format"
                     occurs_symbol = symbol
                     occurs_level = symbol.level
+                    occurs_struct_format = ''
+                    # save "occurs" symbol to update its "struct_format"
                     continue
 
                 if occurs_level is not None and symbol.level <= occurs_level:
@@ -328,7 +332,10 @@ class SymbolTable:
                     occurs_struct_format = occurs_struct_format * occurs_symbol.occurs
                     occurs_symbol.struct_format = occurs_struct_format
                     occurs_symbol.occurs_adjusted_size = occurs_contents_size * (occurs_symbol.occurs - 1)
+                    occurs_symbol = None
                     occurs_level = None
+                    occurs_struct_format = None
+                    occurs_contents_size = 0
 
                 if symbol.struct_format is not None:
                     if occurs_symbol is not None:
