@@ -1,0 +1,3 @@
+service: producer-oil-gas-ml
+runtime: custom
+env: flex

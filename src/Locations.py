@@ -1,4 +1,8 @@
-from urllib.request import urlopen
+import requests
+from bs4 import BeautifulSoup
+
+
+
 
 class Locations(object):
     '''
@@ -30,7 +34,16 @@ class Locations(object):
     '''
 
     def __init__(self, starting_url):
-        self.starting_url = starting_url
-        page = urlopen(starting_url)
-        dataset_download_html = page.read()
-        dataset_start_html = dataset_download_html.decode("utf-8")
+        self.url = starting_url
+        page = requests.get(self.url)
+        soup = BeautifulSoup(page.content, "html.parser")
+        self.h1 = [a.text for a in soup.find_all('h1')]
+        self.h2 = [a.text for a in soup.find_all('h2')]
+        self.h2_DataSets = [a.text for a in soup.find_all('h2', string="Data Sets")]
+        import pdb; pdb.set_trace()
+
+    def h1(self):
+        return self.h1
+
+    def h2(self):
+        return self.h2
