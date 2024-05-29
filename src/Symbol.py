@@ -16,7 +16,7 @@ def is_computational(usage):
 class Symbol:
     level: int = None
     name: str = None
-    picture: str = None
+    picture: str = ''
     cardinality: int = None
     redefines: str = None
     occurs: int = None
@@ -162,6 +162,8 @@ class SymbolTable:
         self.current_level = None
         self.redefined = set()
         self.struct_format = []
+        # column names for dataframe
+        self.columns = []
 
     def add_level(self):
         self.table.append([])
@@ -220,11 +222,11 @@ class SymbolTable:
             for symbol in level:
                 _str += str(symbol) + '\n'
 
-            _str += f'\nSymbol table size: {self.sizes[counter]}'
-            _str += f'\nSymbol table struct format: {self.struct_format[counter]}'
+            _str += f'\n.sizes[{counter}]={self.sizes[counter]}'
+            _str += f'\n.struct_format[{counter}] = {self.struct_format[counter]}'
 
         if self.redefined:
-            _str += f'\nRedefined symbols: {self.redefined}'
+            _str += f'\n.redefined={self.redefined}'
 
         return _str
 
@@ -256,6 +258,13 @@ class SymbolTable:
                 symbol.end = end
             self.sizes.append(size + occurs_adjusted_size)
 
+    def finalize_columns(self):
+        for level in self.table:
+            self.columns.append([])
+            for index, symbol in enumerate(level):
+                if symbol.struct_format is not None:
+                    self.columns[-1].append(symbol.name)
+    
     def finalize_struct_format(self):
         self.struct_format = []
         for level in self.table:
@@ -266,7 +275,7 @@ class SymbolTable:
                 if symbol.struct_format is not None:
                     struct_format += symbol.struct_format
 
-            self.struct_format[-1].append(struct_format)
+            self.struct_format[-1] = struct_format
 
     def set_occurs_format(self):
         '''
@@ -378,6 +387,7 @@ class SymbolTable:
     def finalize(self):
         self.set_occurs_format()
         self.finalize_struct_format()
+        self.finalize_columns()
         self.count_size()
 
     def __len__(self):

@@ -468,7 +468,7 @@ def test_extract_structures(test_1_copybook_file_contents):
         symbol_table = extract_structures(tmp.name)
         assert(len(symbol_table) == 4)
         assert(symbol_table.sizes[0] == 1200)
-        assert(symbol_table.sizes[1] == 1199)
+        assert(symbol_table.sizes[1] == 1200)
         assert(symbol_table.sizes[2] == 1200)
         assert(symbol_table.sizes[3] == 1208)
         result = symbol_table.find_table_level_symbol('WM-JOHN')

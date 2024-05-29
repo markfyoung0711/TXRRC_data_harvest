@@ -131,6 +131,7 @@ def visit_to_generate_symbol_table(ctx:ParserRuleContext):
             # PIC
             _picture = []
             if len(ctx.dataPictureClause()) > 0:
+                current_symbol.picture = ''
                 for cindex in ctx.dataPictureClause():
                     cardinality_seen = False
                     for counter, pindex in enumerate(cindex.pictureString().pictureChars()):
@@ -157,7 +158,7 @@ def visit_to_generate_symbol_table(ctx:ParserRuleContext):
                                 continue
                             else:
                                 integer_text = pindex.getText()
-                                current_symbol.picture = integer_text
+                                current_symbol.picture += integer_text
                                 _picture.append(integer_text)
 
             _picture_string = ''
