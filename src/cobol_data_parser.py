@@ -3,6 +3,7 @@ import struct
 import sys
 
 import click
+import pandas as pd
 import yaml
 
 from antlr4 import FileStream, CommonTokenStream, ParseTreeWalker
@@ -66,33 +67,41 @@ def file_parser(data_file, key_start, key_end, record_definitions, formats, colu
             {'1': (1200, '1s2s...', ['FIELD-TYPE-OIL', 'WELL-APINO', ...], [ )
     '''
     records = {}
-    keys = list(record_definitions['record_types'].keys())
-    for key in keys:
-        records[key] = []
+    record_types = list(record_definitions['record_types'].keys())
+    for record_type in record_types:
+        records[record_type] = []
     
     # Read the key value position
     total_bytes_read = 0
     f = open(data_file, 'rb', buffering=0)
-    field_type = f.read(key_end - key_start)
+    record_type = f.read(key_end - key_start)
     total_bytes_read += key_end - key_start
-    while len(field_type) > 0:
+    while len(record_type) > 0:
         # 1. parse key field, key value
-        field_type_str = field_type.decode('cp424')
-        if field_type_str not in keys:
-            raise Exception(f'field record number {field_type_str} not supported. must be in {keys}')
+        record_type_str = record_type.decode('cp424')
+        if record_type_str not in record_types:
+            raise Exception(f'field record number {record_type_str} not supported. must be in {record_types}')
 
-        record_definition_position = record_definitions['record_types'][field_type_str]['record_definition_position']
+        record_definition_position = record_definitions['record_types'][record_type_str]['record_definition_position']
         # 2. select structure from record type config
-        rec = field_type + f.read(sizes[record_definition_position] - 1)
+        rec = record_type + f.read(sizes[record_definition_position] - 1)
         total_bytes_read += sizes[record_definition_position] - 1
         rec = struct.unpack(formats[record_definition_position], rec)
-        records[field_type_str].append(rec)
+        records[record_type_str].append(rec)
         # get next field
-        field_type = f.read(key_end - key_start)
+        record_type = f.read(key_end - key_start)
         total_bytes_read += key_end - key_start
 
     # 3. separate rows according to key value into N dataframes, combine into one dataframe
-    return records
+    df_list = []
+    for record_type in record_types:
+        record_definition_position = record_definitions['record_types'][record_type]['record_definition_position']
+        record_type_columns = columns[record_definition_position]
+        df = pd.DataFrame(records[record_type], columns=record_type_columns)
+        df.loc[:, 'record_type_name'] = record_definitions['record_types'][record_type]['name']
+        df_list.append(df)
+
+    return pd.concat(df_list)
 
 
 @click.command()
