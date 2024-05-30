@@ -311,11 +311,8 @@ FD oil_file.
               03 PERF PIC 9(5).
               03 W-DATE PIC 9(8).
               03 WELL-D REDEFINES W-DATE.
-                  05 WELL-D-CCYY PIC 9(4).
-                  05 WELL-D-CCYY-REDF REDEFINES
-                     WELL-D-CCYY.
-                      07 WELL-D-CC PIC 99.
-                      07 WELL-D-YR PIC 99.
+                  05 WELL-D-CC PIC 99.
+                  05 WELL-D-YR PIC 99.
                   05 WELL-D-MO PIC 99.
                   05 WELL-D-DAY PIC 99.
               03 EX-14B-CD PIC X.
@@ -330,11 +327,8 @@ FD oil_file.
               03 W-WATER PIC 9(4).
               03 EX-14B-DATE PIC 9(6).
               03 EX-14B-DATE-REDF REDEFINES EX-14B-DATE.
-                  05 EX-CCYY-14B PIC 9(4).
-                  05 EX-CCYY-14B-REDF REDEFINES
-                     EX-CCYY-14B.
-                      07 EX-CC-14B PIC 99.
-                      07 EX-YR-14B PIC 99.
+                  05 EX-CC-14B PIC 99.
+                  05 EX-YR-14B PIC 99.
                   05 EX-MO-14B PIC 99.
               03 W-RMKS PIC X(15).
               03 BONUS-AMT PIC 9(4).
@@ -345,33 +339,21 @@ FD oil_file.
               03 W-WLSD PIC 9.
               03 W-TST-DT PIC 9(8).
               03 W-TEST-DATE REDEFINES W-TST-DT.
-                  05 W-TST-CCYY PIC 9(4).
-                  05 W-TST-CCYY-REDF REDEFINES W-TST-CCYY.
-                      07 W-TST-CC PIC 99.
-                      07 W-TST-YR PIC 99.
+                  05 W-TST-CC PIC 99.
+                  05 W-TST-YR PIC 99.
                   05 W-TST-MO PIC 99.
                   05 W-TST-DA PIC 99.
-              03 W-TST-DTE REDEFINES W-TST-DT.
-                  05 W-T-DT-CC PIC 99.
-                  05 W-T-DT PIC 9(4).
-                  05 FILLER16 PIC 99.
               03 W-DTE-LST-UTL PIC 9(6).
               03 W-DTE-LST-UTL-REDF REDEFINES W-DTE-LST-UTL.
-                  05 W-DTE-LST-UTL-CCYY PIC 9(4).
-                  05 W-DTE-LST-UTL-CCYY-REDF REDEFINES
-                     W-DTE-LST-UTL-CCYY.
-                      07 W-DTE-LST-UTL-CC PIC 99.
-                      07 W-DTE-LST-UTL-YY PIC 99.
+                  05 W-DTE-LST-UTL-CC PIC 99.
+                  05 W-DTE-LST-UTL-YY PIC 99.
                   05 W-DTE-LST-UTL-MM PIC 99.
               03 W-NEW-WB-EXC PIC X(01).
               03 W-NEW-WB-CONNECT-DATE PIC 9(8).
               03 W-NEW-WB-CONNECT-DATE-REDF REDEFINES
                  W-NEW-WB-CONNECT-DATE.
-                  05 W-NEW-WB-CCYY PIC 9(4).
-                  05 W-NEW-WB-CCYY-REDF REDEFINES
-                     W-NEW-WB-CCYY.
-                      07 W-NEW-WB-CC PIC 99.
-                      07 W-NEW-WB-YR PIC 99.
+                  05 W-NEW-WB-CC PIC 99.
+                  05 W-NEW-WB-YR PIC 99.
                   05 W-NEW-WB-MO PIC 99.
                   05 W-NEW-WB-DA PIC 99.
               03 W-14B2-TYPE-COVERAGE PIC X(01).
@@ -382,10 +364,8 @@ FD oil_file.
               03 W-MONTH OCCURS 14 TIMES.
                   05 W-MONTH-DATE PIC 9(6).
                   05 W-MONTH-DATE-REDF REDEFINES W-MONTH-DATE.
-                      07 WM-CCYY PIC 9(4).
-                      07 WM-CCYY-REDF REDEFINES WM-CCYY.
-                          09 WM-CC PIC 99.
-                          09 WM-YR PIC 99.
+                      07 WM-CC PIC 99.
+                      07 WM-YR PIC 99.
                       07 WM-MO PIC 99.
                   05 WM-CHG PIC 9.
                   05 WM-NO PIC 9.

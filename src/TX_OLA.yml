@@ -1,0 +1,25 @@
+Shared-Field-Record-Type:
+    key_field_name: RECORD-TYPE-FIELD
+    key_position: [0, 1]
+
+# record type value
+record_types:
+    '1':
+        name: Oil Field
+        key_field_name: TYPE-REC
+        record_definition_position: 0
+    
+    '3':
+        name: Oil Lease
+        key_field_name: LEASE-REC-TYPE-REC
+        record_definition_position: 1
+    
+    '4':
+        name: Oil Multi-Well
+        key_field_name: MULTI-W-REC-TYPE-REC
+        record_definition_position: 2
+    
+    '5':
+        name: Oil Well
+        key_field_name: WELL-REC-TYPE-REC
+        record_definition_position: 3
